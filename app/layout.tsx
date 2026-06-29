@@ -37,19 +37,19 @@ export default function RootLayout({
           {/* Scanline Overlay */}
           <div className="fixed inset-0 scanlines z-[100] pointer-events-none mix-blend-multiply"></div>
           
-          {/* CRT TV Convex Glass Reflection Overlay */}
+          {/* Extreme CRT TV Convex Glass Reflection Overlay */}
           <div 
             className="fixed inset-0 pointer-events-none z-[99999] mix-blend-multiply" 
             style={{
-              boxShadow: "inset 0 0 120px rgba(0,0,0,0.95)",
-              background: "radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.6) 120%)"
+              boxShadow: "inset 0 0 250px rgba(0,0,0,1), inset 0 0 80px rgba(0,0,0,0.8)",
+              background: "radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.85) 130%)"
             }}
           ></div>
-          {/* Convex center highlight (Simulating curved glass bulge) */}
+          {/* Intense Convex center highlight (Simulating deep curved glass bulge) */}
           <div 
-            className="fixed inset-0 pointer-events-none z-[99999] opacity-40 mix-blend-screen"
+            className="fixed inset-0 pointer-events-none z-[99999] opacity-70 mix-blend-screen"
             style={{
-              background: "radial-gradient(ellipse at 50% 15%, rgba(255,255,255,0.15) 0%, transparent 50%)"
+              background: "radial-gradient(ellipse at 50% 15%, rgba(255,255,255,0.25) 0%, transparent 60%)"
             }}
           ></div>
           
