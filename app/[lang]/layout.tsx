@@ -17,49 +17,61 @@ const spaceMono = Roboto_Mono({
   subsets: ["latin", "cyrillic"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://terreya.com"),
-  title: "TERREYA HOLDING | AI Orchestration & Digital Systems",
-  description: "Terreya Holding — создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.",
-  keywords: ["AI Architecture", "Digital Agency", "Business Automation", "Terreya", "ИИ автоматизация", "Разработка"],
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-    googleBot: {
+export function generateStaticParams() {
+  return [{ lang: 'ru' }, { lang: 'en' }];
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    metadataBase: new URL("https://terreya.com"),
+    title: "TERREYA HOLDING | AI Orchestration & Digital Systems",
+    description: "Terreya Holding — создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.",
+    keywords: ["AI Architecture", "Digital Agency", "Business Automation", "Terreya", "ИИ автоматизация", "Разработка"],
+    robots: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      nocache: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
-  },
-  openGraph: {
-    title: "TERREYA HOLDING | AI Architecture",
-    description: "Надежные ИИ-системы для бизнеса.",
-    url: "https://terreya.com",
-    siteName: "TERREYA",
-    images: [
-      {
-        url: "/portfolio/dvor.png",
-        width: 1200,
-        height: 630,
-        alt: "Terreya Architecture"
+    openGraph: {
+      title: "TERREYA HOLDING | AI Architecture",
+      description: "Надежные ИИ-системы для бизнеса.",
+      url: `https://terreya.com/${lang}`,
+      siteName: "TERREYA",
+      images: [
+        {
+          url: "/og-banner.png",
+          width: 1200,
+          height: 630,
+          alt: "Terreya Architecture"
+        }
+      ],
+      locale: lang === 'ru' ? "ru_RU" : "en_US",
+      type: "website"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "TERREYA HOLDING | AI Architecture",
+      description: "Надежные ИИ-системы для бизнеса.",
+      images: ["/portfolio/dvor.png"],
+    },
+    alternates: {
+      canonical: `https://terreya.com/${lang}`,
+      languages: {
+        'ru': 'https://terreya.com/ru',
+        'en': 'https://terreya.com/en',
+        'x-default': 'https://terreya.com/ru'
       }
-    ],
-    locale: "ru_RU",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "TERREYA HOLDING | AI Architecture",
-    description: "Надежные ИИ-системы для бизнеса.",
-    images: ["/portfolio/dvor.png"],
-  },
-  alternates: {
-    canonical: "https://terreya.com"
-  }
-};
+    }
+  };
+}
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -91,13 +103,17 @@ const jsonLd = {
   }
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 }>) {
+  const { lang } = await params;
   return (
-    <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
+    // [Modified by Antigravity Mac: dynamic lang for i18n]
+    <html lang={lang} className={`${inter.variable} ${spaceMono.variable}`}>
       <head>
         <link rel="preload" as="image" href="/tv-frame.png" />
         <script
@@ -106,7 +122,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased min-h-screen relative font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container bg-black">
-        <LanguageProvider>
+        <LanguageProvider initialLang={lang as any}>
           {/* TV Screen Bounding Box (Expanded to bleed UNDER the TV Bezel on desktop, fullscreen on mobile) */}
           <div 
             id="tv-screen"

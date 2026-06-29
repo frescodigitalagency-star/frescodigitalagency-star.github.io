@@ -1,0 +1,7 @@
+version: 0.1.0
+name: Terreya Holding OKF
+description: Machine-readable context bundle for Terreya Holding
+publisher:
+  name: Terreya
+  url: https://terreya.com
+entrypoint: index.md

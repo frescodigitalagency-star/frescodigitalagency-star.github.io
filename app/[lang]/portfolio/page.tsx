@@ -66,10 +66,10 @@ export default function PortfolioPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
-      <div className="w-full max-w-6xl mx-auto flex flex-col font-data-mono">
+      <main className="w-full max-w-6xl mx-auto flex flex-col font-data-mono">
         
         {/* CCTV Monitor Frame */}
-        <div className="border-[6px] md:border-[12px] border-[#553E16] bg-black p-2 md:p-6 shadow-[16px_16px_0_rgba(85,62,22,0.3)] relative">
+        <section aria-label="Portfolio Item Viewer" className="border-[6px] md:border-[12px] border-[#553E16] bg-black p-2 md:p-6 shadow-[16px_16px_0_rgba(85,62,22,0.3)] relative">
           
           {/* Main Feed Container */}
           <div className="relative w-full aspect-video bg-[#0a0a0a] border-2 border-[#553E16]/30 overflow-hidden flex items-center justify-center group">
@@ -128,10 +128,10 @@ export default function PortfolioPage() {
             </button>
             
           </div>
-        </div>
+        </section>
 
         {/* Camera Selector (Mini-map) */}
-        <div className="mt-4 flex gap-2 overflow-x-auto custom-scrollbar pb-2">
+        <nav aria-label="Portfolio Selector" className="mt-4 flex gap-2 overflow-x-auto custom-scrollbar pb-2">
           {PORTFOLIO_ITEMS.map((item, idx) => (
             <button
               key={item.id}
@@ -150,10 +150,10 @@ export default function PortfolioPage() {
               CAM {String(idx + 1).padStart(2, '0')}
             </button>
           ))}
-        </div>
+        </nav>
 
         {/* Info Terminal Below */}
-        <div className="mt-6 border-[4px] border-[#553E16] bg-[#B5B48B] p-6 md:p-8 shadow-[8px_8px_0_rgba(85,62,22,0.3)] flex flex-col md:flex-row justify-between gap-8 relative overflow-hidden">
+        <article aria-label="Project Details" className="mt-6 border-[4px] border-[#553E16] bg-[#B5B48B] p-6 md:p-8 shadow-[8px_8px_0_rgba(85,62,22,0.3)] flex flex-col md:flex-row justify-between gap-8 relative overflow-hidden">
           
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#553E16] opacity-5 transform rotate-45 translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
@@ -201,9 +201,9 @@ export default function PortfolioPage() {
               </div>
             )}
           </div>
-        </div>
+        </article>
 
-      </div>
+      </main>
 
       {/* Dossier Modal */}
       {dossierOpen && currentItem.dossier && typeof window !== "undefined" && createPortal(

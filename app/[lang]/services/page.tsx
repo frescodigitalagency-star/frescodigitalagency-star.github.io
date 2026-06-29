@@ -80,7 +80,8 @@ export default function ServicesPage() {
 
   return (
     <AppLayout>
-      <div className="w-full max-w-6xl mx-auto flex flex-col font-data-mono">
+      <main className="w-full max-w-6xl mx-auto flex flex-col font-data-mono">
+        <h1 className="sr-only">{t("services", "title")}</h1>
         
         {/* FOLDER TAB */}
         <div className="flex items-end">
@@ -94,11 +95,11 @@ export default function ServicesPage() {
         </div>
 
         {/* FOLDER BODY */}
-        <div className="border-[3px] border-t-0 border-[#553E16] bg-[#B5B48B] p-4 md:p-8 shadow-[8px_8px_0_rgba(0,0,0,0.2)]">
+        <section className="border-[3px] border-t-0 border-[#553E16] bg-[#B5B48B] p-4 md:p-8 shadow-[8px_8px_0_rgba(0,0,0,0.2)]">
           <div className="w-full flex flex-col md:flex-row min-h-[60vh]">
             
             {/* DOS/BIOS Style Left Navigation */}
-            <div className="w-full md:w-1/3 border-b-2 md:border-b-0 md:border-r-2 border-[#553E16] flex flex-col pr-0 md:pr-6 pb-6 md:pb-0 mb-6 md:mb-0 shrink-0">
+            <nav aria-label="Services Navigation" className="w-full md:w-1/3 border-b-2 md:border-b-0 md:border-r-2 border-[#553E16] flex flex-col pr-0 md:pr-6 pb-6 md:pb-0 mb-6 md:mb-0 shrink-0">
               <h2 className="text-sm font-bold uppercase mb-6 opacity-70 tracking-widest border-b border-[#553E16] pb-2">
                 {lang === "ru" ? "ИЕРАРХИЯ ПАПОК:" : "FOLDER HIERARCHY:"}
               </h2>
@@ -125,28 +126,28 @@ export default function ServicesPage() {
                 <br/>
                 {t("services", "support")}
               </div>
-            </div>
+            </nav>
 
             {/* Details Content Panel */}
-            <div className="w-full md:w-2/3 md:pl-8 overflow-y-auto custom-scrollbar relative">
+            <article aria-labelledby="service-panel-title" className="w-full md:w-2/3 md:pl-8 overflow-y-auto custom-scrollbar relative">
               <div className="absolute top-0 right-0 text-xs font-bold bg-[#553E16]/10 px-2 py-1">
                 INDEX_FILE: 0x{activeTab.toString().padStart(4, "0")}A.dat
               </div>
               <div className="mt-8 mb-8">
                 {renderContent()}
               </div>
-            </div>
+            </article>
 
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </AppLayout>
   );
 }
 
 function ServiceItem({ title, desc, price }: { title: string, desc: string, price: string }) {
   return (
-    <div className="group border-b-2 border-[#553E16] border-dashed pb-6 hover:bg-[#553E16]/5 transition-all p-2 -mx-2">
+    <article className="group border-b-2 border-[#553E16] border-dashed pb-6 hover:bg-[#553E16]/5 transition-all p-2 -mx-2">
       <h4 className="font-bold uppercase tracking-wide group-hover:text-error transition-colors flex items-center">
         <span className="material-symbols-outlined mr-2 text-sm opacity-50">description</span>
         {title}
@@ -158,6 +159,6 @@ function ServiceItem({ title, desc, price }: { title: string, desc: string, pric
           {price}
         </span>
       </div>
-    </div>
+    </article>
   );
 }

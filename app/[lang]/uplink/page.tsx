@@ -63,9 +63,9 @@ export default function UplinkPage() {
         {/* Connected State Content */}
         {isConnected && (
           <div className="flex flex-col animate-fade-in flex-1">
-            <h2 className="text-3xl md:text-5xl font-bold uppercase mb-8 tracking-tighter border-l-4 border-[#00FF00] pl-4">
+            <h1 className="text-3xl md:text-5xl font-bold uppercase mb-8 tracking-tighter border-l-4 border-[#00FF00] pl-4">
               {lang === "ru" ? "КАНАЛ ОТКРЫТ" : "CHANNEL OPEN"}
-            </h2>
+            </h1>
             
             <div className="flex flex-col gap-6 w-full max-w-2xl mt-4">
               <a 
