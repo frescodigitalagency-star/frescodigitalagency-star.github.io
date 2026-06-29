@@ -4,49 +4,113 @@
     "src": "/portfolio/avralab-v2.png", 
     "title": "AVRALAB.UZ", 
     "desc": "Студия визуальной и смысловой упаковки. Интеграция с CRM, дизайн в стиле brutalism.",
-    "link": "https://avralab.uz/" 
+    "link": "https://avralab.uz/",
+    "dossier": {
+      "goal": "Создание премиальной витрины для дизайн-студии с фокусом на визуальный сторителлинг.",
+      "hours": 140,
+      "architecture": "Статическая генерация (SSG) с гидратацией интерактивных компонентов.",
+      "stack": "Next.js, TailwindCSS, Framer Motion. Выбор обусловлен необходимостью сложной анимации и высокого SEO.",
+      "security": "Базовая защита роутов, CSRF токены для форм обратной связи.",
+      "devTerms": ["Brutalism UI", "SSG", "Micro-interactions", "Framer Motion"]
+    }
   },
   { 
     "id": "ADAM_AUDIO", 
     "src": "/portfolio/adam_audio.png", 
     "title": "ADAM AUDIO CATALOG", 
     "desc": "Цифровой каталог для студийных мониторов. Фокус на UX и плавные анимации.",
-    "link": "https://frescodigitalagency-star.github.io/adam-audio-catalog/" 
+    "link": "https://frescodigitalagency-star.github.io/adam-audio-catalog/",
+    "dossier": {
+      "goal": "Разработка цифрового продуктового каталога для премиальной аудиоаппаратуры.",
+      "hours": 85,
+      "architecture": "Одностраничное приложение с предзагрузкой медиа-ассетов.",
+      "stack": "HTML, CSS, JS, GSAP. Идеально для тяжелых timeline-анимаций без оверхеда фреймворков.",
+      "security": "Статика (GitHub Pages).",
+      "devTerms": ["Vanilla JS", "GSAP Timeline", "Preloading", "DOM Animations"]
+    }
   },
   { 
     "id": "CRM_APP", 
     "src": "/portfolio/crm_app.png", 
     "title": "CRM-APP & DASHBOARD",
-    "desc": "Основная задеплоенная CRM система + headless-слой crm-cli для личного учёта расходов и автоматизации бизнес-процессов."
+    "desc": "Основная задеплоенная CRM система + headless-слой crm-cli для личного учёта расходов и автоматизации бизнес-процессов.",
+    "dossier": {
+      "goal": "Автоматизация учета финансов и управления задачами холдинга.",
+      "hours": 320,
+      "architecture": "Headless CLI слой + Web App (Vite/React). Два разных хранилища с похожей схемой.",
+      "stack": "Vite/React 18 + Express + PostgreSQL (Supabase pooler). JWT, bcryptjs, zod, express-rate-limit.",
+      "security": "JWT-авторизация, bcrypt шифрование, ограничение запросов (Rate Limiting).",
+      "devTerms": ["Headless CLI", "Vite", "Zod", "Supabase Pooler"]
+    }
   },
   { 
     "id": "SMART_SOLIQ", 
     "src": "/portfolio/POST_REDACTED_DOCUMENT.png", 
     "title": "SMARTSOLIQ AGENT",
-    "desc": "Система контроля комплаенса для самозанятых. Автоматическая проверка деятельности, расчёт налогов и генерация ЭСФ."
+    "desc": "Система контроля комплаенса для самозанятых. Автоматическая проверка деятельности, расчёт налогов и генерация ЭСФ.",
+    "dossier": {
+      "goal": "Создание агента для автоматизации налогового комплаенса, Onshore клиентские данные.",
+      "hours": 150,
+      "architecture": "Веб-панель бухгалтера (с подписью ЭСФ через браузер) + Node.js Backend на UZ-VPS.",
+      "stack": "Node.js (Backend) + E-IMZO (браузерный WSS для цифровых подписей). Соответствует ст. 27-1.",
+      "security": "E-IMZO локальная подпись, onshore хранение данных, compliance 27-1.",
+      "devTerms": ["E-IMZO", "UZ-VPS", "Data Compliance", "WSS"]
+    }
   },
   { 
     "id": "AI_ORCHESTRATOR", 
     "src": "/portfolio/POST_BIOS_SETUP.png", 
     "title": "AI ORCHESTRATOR V3",
-    "desc": "Локальная панель управления для координации автономных ИИ-агентов (Claude, Codex, Antigravity) на Mac/ПК."
+    "desc": "Локальная панель управления для координации автономных ИИ-агентов (Claude, Codex, Antigravity) на Mac/ПК.",
+    "dossier": {
+      "goal": "Централизация управления флоком ИИ-субагентов и парсинг markdown-логов.",
+      "hours": 210,
+      "architecture": "Локальный API координатор + парсер Obsidian.",
+      "stack": "Python, FastAPI, SQLite. Идеален для быстрых эндпоинтов и взаимодействия с ИИ.",
+      "security": "Локальный биндинг, ограниченный доступ к файловой системе.",
+      "devTerms": ["FastAPI", "Agent Flock", "Markdown Parser", "Local Daemon"]
+    }
   },
   { 
     "id": "SHORTS_FACTORY", 
     "src": "/portfolio/POST_VHS_TRACKING_ERROR.png", 
     "title": "AUTONOMOUS SHORTS FACTORY",
-    "desc": "Автономная модульная фабрика для потоковой генерации YouTube Shorts на базе AI с выделенным демоном-наблюдателем (watchdog)."
+    "desc": "Автономная модульная фабрика для потоковой генерации YouTube Shorts на базе AI с выделенным демоном-наблюдателем (watchdog).",
+    "dossier": {
+      "goal": "Полностью автоматизированный пайплайн генерации контента (модульная Lego-архитектура).",
+      "hours": 180,
+      "architecture": "Пайплайн (Модули M1-M8 как эндпоинты) с FastAPI воркерами.",
+      "stack": "Python, FastAPI, FFmpeg, Faster-Whisper. Стандарт для видео-процессинга и AI-транскрипции.",
+      "security": "Секретные ключи в локальных env, защита эндпоинтов.",
+      "devTerms": ["FastAPI Worker", "FFmpeg Pipeline", "Faster-Whisper", "Watchdog"]
+    }
   },
   { 
     "id": "FACTORY_HERMES", 
     "src": "/portfolio/POST_INTERCOM_SPEAKER.png", 
     "title": "FACTORY HERMES",
-    "desc": "Инфраструктура субагентов, cron-задач и Telegram-gateway, слитая с ядром фабрики CORDBLANK (adversarial review + консенсус)."
+    "desc": "Инфраструктура субагентов, cron-задач и Telegram-gateway, слитая с ядром фабрики CORDBLANK (adversarial review + консенсус).",
+    "dossier": {
+      "goal": "Слияние инфры Hermes Agent с ядром фабрики CORDBLANK.",
+      "hours": 250,
+      "architecture": "Telegram-poller + cron-агенты + Shim для Claude/OpenAI.",
+      "stack": "Python (telegram_poller.py, claude_openai_shim.py), launchd.",
+      "security": "Adversarial review (AI проверяет AI), Human merge-gate, Аудируемый консенсус.",
+      "devTerms": ["Telegram Gateway", "Shim", "Adversarial Review", "Consensus Protocol"]
+    }
   },
   { 
     "id": "DVOR", 
     "src": "/portfolio/dvor.png", 
     "title": "DVOR APP BACKEND",
-    "desc": "Мобильная и бэкенд-архитектура с локальным кэшированием (AES-GCM), системой ролей и защитой от MitM-атак через SSL Pinning."
+    "desc": "Мобильная и бэкенд-архитектура с локальным кэшированием (AES-GCM), системой ролей и защитой от MitM-атак через SSL Pinning.",
+    "dossier": {
+      "goal": "Разработать нативное мобильное приложение с защищенным API.",
+      "hours": 400,
+      "architecture": "Нативный iOS клиент (MVVM-C / VIPER) + Защищенный бэкенд.",
+      "stack": "Swift (iOS), LogoMark UI. Оптимизировано для Apple Ecosystem.",
+      "security": "Локальное кэширование AES-GCM, SSL Pinning против MitM.",
+      "devTerms": ["SwiftUI", "VIPER", "SSL Pinning", "AES-GCM"]
+    }
   }
 ]

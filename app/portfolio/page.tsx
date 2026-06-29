@@ -12,8 +12,9 @@ export default function PortfolioPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [time, setTime] = useState("");
   const [glitch, setGlitch] = useState(false);
+  const [dossierOpen, setDossierOpen] = useState(false);
 
-  const currentItem = PORTFOLIO_ITEMS[currentIndex];
+  const currentItem = PORTFOLIO_ITEMS[currentIndex] as any;
 
   useEffect(() => {
     // Clock for the CCTV overlay
@@ -155,9 +156,12 @@ export default function PortfolioPage() {
               <div className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">
                 {lang === "ru" ? "СТАТУС ИНДЕКСАЦИИ" : "INDEX STATUS"}
               </div>
-              <div className="bg-[#553E16] text-[#B5B48B] px-4 py-2 font-bold inline-block text-sm">
+              <button 
+                onClick={() => setDossierOpen(true)}
+                className="bg-[#553E16] text-[#B5B48B] px-4 py-2 font-bold inline-block text-sm cursor-pointer hover:bg-[#B5B48B] hover:text-[#553E16] transition-colors uppercase text-left"
+              >
                 {t("portfolio", "indexed")}
-              </div>
+              </button>
             </div>
             
             {currentItem.link ? (
@@ -179,6 +183,107 @@ export default function PortfolioPage() {
         </div>
 
       </div>
+
+      {/* Dossier Modal */}
+      {dossierOpen && currentItem.dossier && (
+        <div className="fixed inset-0 z-[9999999] bg-black/90 flex flex-col items-center justify-center p-4 md:p-12 font-data-mono">
+          <div className="bg-[#B5B48B] text-[#553E16] border-4 border-[#553E16] w-full max-w-5xl shadow-[16px_16px_0_rgba(85,62,22,1)] relative crt-flicker flex flex-col max-h-full">
+            
+            {/* Modal Header */}
+            <div className="border-b-4 border-[#553E16] p-4 flex justify-between items-center bg-[#553E16] text-[#B5B48B]">
+              <div className="font-bold text-lg md:text-xl uppercase flex items-center gap-3">
+                <span className="w-3 h-3 bg-red-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(255,0,0,0.8)]"></span>
+                CLASSIFIED DOSSIER // {currentItem.id}
+              </div>
+              <button onClick={() => setDossierOpen(false)} className="text-2xl font-black hover:text-white transition-colors cursor-pointer">
+                [X]
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 md:p-10 overflow-y-auto custom-scrollbar flex-1 flex flex-col gap-8">
+              
+              <div className="flex flex-col md:flex-row gap-8">
+                {/* Meta sidebar */}
+                <div className="md:w-1/3 flex flex-col gap-6">
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">
+                      {lang === "ru" ? "ЧАСОВ ЗАТРАЧЕНО" : "HOURS LOGGED"}
+                    </div>
+                    <div className="text-4xl md:text-6xl font-black">{currentItem.dossier.hours}H</div>
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">
+                      {lang === "ru" ? "УРОВЕНЬ ДОСТУПА" : "CLEARANCE LEVEL"}
+                    </div>
+                    <div className="text-lg font-bold border-2 border-[#553E16] inline-block px-2 py-1 bg-[#553E16] text-[#B5B48B]">
+                      TOP SECRET
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">
+                      {lang === "ru" ? "ТЕРМИНЫ" : "DEV TERMS"}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {/* @ts-ignore */}
+                      {currentItem.dossier.devTerms?.map((term: string, i: number) => (
+                        <span key={i} className="bg-[#553E16]/10 border border-[#553E16] px-2 py-1 text-xs font-bold uppercase">
+                          {term}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Main Content Info */}
+                <div className="md:w-2/3 flex flex-col gap-6 md:gap-8 border-t-4 md:border-t-0 md:border-l-4 border-[#553E16] pt-6 md:pt-0 md:pl-8">
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">
+                      {lang === "ru" ? "ЦЕЛЬ ОПЕРАЦИИ" : "OPERATIONAL GOAL"}
+                    </div>
+                    {/* @ts-ignore */}
+                    <div className="text-lg md:text-2xl font-bold uppercase leading-snug">
+                      {/* @ts-ignore */}
+                      {currentItem.dossier.goal}
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">
+                      {lang === "ru" ? "АРХИТЕКТУРА" : "SYSTEM ARCHITECTURE"}
+                    </div>
+                    <div className="text-base md:text-lg leading-relaxed font-bold border-l-4 border-[#553E16] pl-4 bg-[#553E16]/5 py-3">
+                      {/* @ts-ignore */}
+                      {currentItem.dossier.architecture}
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">
+                      {lang === "ru" ? "ТЕХ. СТЕК И ОБОСНОВАНИЕ" : "TECH STACK & REASONING"}
+                    </div>
+                    <div className="text-base md:text-lg leading-relaxed font-bold">
+                      {/* @ts-ignore */}
+                      {currentItem.dossier.stack}
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">
+                      {lang === "ru" ? "ПРОТОКОЛЫ ЗАЩИТЫ" : "SECURITY PROTOCOLS"}
+                    </div>
+                    <div className="text-base md:text-lg leading-relaxed font-bold text-[#ba1a1a] drop-shadow-[0_0_2px_rgba(186,26,26,0.2)]">
+                      {/* @ts-ignore */}
+                      {currentItem.dossier.security}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      )}
     </AppLayout>
   );
 }
