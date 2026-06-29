@@ -100,19 +100,19 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
 
           {/* Glitchy GIF from a movie / CCTV feed (FNAF/Saw style) */}
           <img 
-            src="https://media.tenor.com/pZqN-I01_yUAAAAC/fnaf-five-nights-at-freddys.gif" 
+            src="https://media.giphy.com/media/3o7TKSxdQJIsRX04zS/giphy.gif" 
             alt="CCTV OVERRIDE" 
-            className="w-full h-full object-cover grayscale opacity-90 mix-blend-screen scale-110 animate-pulse"
+            className="absolute inset-0 w-full h-full object-cover grayscale opacity-70 scale-110 animate-pulse"
           />
 
           {/* CRT Scanline Overlay */}
-          <div className="absolute inset-0 pointer-events-none opacity-40 mix-blend-overlay" style={{
+          <div className="absolute inset-0 pointer-events-none opacity-40 mix-blend-overlay z-20" style={{
             backgroundImage: "linear-gradient(transparent 50%, rgba(0, 0, 0, 0.8) 50%)",
             backgroundSize: "100% 4px"
           }}></div>
           
-          <div className="absolute inset-0 pointer-events-none" style={{
-            background: "radial-gradient(circle, transparent 30%, rgba(0,0,0,0.9) 100%)"
+          <div className="absolute inset-0 pointer-events-none z-20" style={{
+            background: "radial-gradient(circle, transparent 30%, rgba(0,0,0,0.95) 100%)"
           }}></div>
         </div>
       )}
