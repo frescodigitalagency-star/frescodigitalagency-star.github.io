@@ -36,6 +36,27 @@ export default function RootLayout({
           </div>
           {/* Scanline Overlay */}
           <div className="fixed inset-0 scanlines z-[100] pointer-events-none mix-blend-multiply"></div>
+          
+          {/* CRT TV Bezel & Glass Reflection Overlay */}
+          <div 
+            className="fixed inset-0 pointer-events-none z-[99999]" 
+            style={{
+              boxShadow: "inset 0 0 100px rgba(0,0,0,0.9), inset 0 0 20px rgba(0,0,0,0.8)",
+              border: "16px solid #050505",
+              borderRadius: "40px",
+              background: "radial-gradient(circle, transparent 60%, rgba(0,0,0,0.4) 100%)"
+            }}
+          ></div>
+          {/* Inner Glass Highlight */}
+          <div 
+            className="fixed inset-0 pointer-events-none z-[99999] opacity-20"
+            style={{
+              boxShadow: "inset 0 10px 30px rgba(255,255,255,0.1)",
+              borderRadius: "40px",
+              margin: "16px"
+            }}
+          ></div>
+          
           {children}
         </LanguageProvider>
       </body>
