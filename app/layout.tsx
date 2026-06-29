@@ -31,14 +31,14 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
       <body className="antialiased min-h-screen relative font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container bg-black">
         <LanguageProvider>
-          {/* TV Screen Bounding Box (Traps all fixed elements inside the TV Bezel) */}
+          {/* TV Screen Bounding Box (Expanded to bleed UNDER the TV Bezel) */}
           <div 
-            className="fixed z-10 bg-black overflow-hidden crt-flicker" 
+            className="fixed z-10 bg-background overflow-hidden crt-flicker" 
             style={{
-              top: '5%',
-              bottom: '8%',
-              left: '5%',
-              right: '5%',
+              top: '1%',
+              bottom: '1%',
+              left: '1%',
+              right: '1%',
               borderRadius: '2rem',
               transform: 'translate3d(0,0,0)'
             }}
@@ -67,7 +67,8 @@ export default function RootLayout({
               }}
             ></div>
             
-            <div className="relative w-full h-full overflow-hidden" style={{ transform: 'scale(0.97)', transformOrigin: 'center' }}>
+            {/* Inner Content Wrapper (Scaled down so UI elements don't get cut off by the thick bezel) */}
+            <div className="relative w-full h-full overflow-hidden" style={{ transform: 'scale(0.92)', transformOrigin: 'center' }}>
               {children}
             </div>
           </div>
