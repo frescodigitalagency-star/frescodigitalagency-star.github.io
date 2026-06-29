@@ -109,9 +109,9 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
             {timeString}
           </div>
 
-          {/* Glitchy CCTV feed (using local image to prevent hotlinking errors) */}
+          {/* Glitchy CCTV feed */}
           <img 
-            src="/portfolio/POST_SURVEILLANCE_FEED.png" 
+            src="/portfolio/POST_VHS_TRACKING_ERROR.png" 
             alt="CCTV OVERRIDE" 
             className="absolute inset-0 w-full h-full object-cover grayscale opacity-70 scale-110 animate-pulse"
           />
@@ -146,7 +146,7 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
           ) : (
             <>
               <img 
-                src="/portfolio/POST_SURVEILLANCE_FEED.png" 
+                src="/portfolio/POST_CORRUPTED_FILE.png" 
                 alt="TERMINAL DESTROYED" 
                 className="absolute inset-0 w-full h-full object-cover grayscale opacity-80 animate-pulse scale-110"
               />
