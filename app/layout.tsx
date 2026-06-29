@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
-      <body className="antialiased min-h-screen relative font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+      <body className="antialiased min-h-screen relative font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container bg-black">
         <LanguageProvider>
           {/* TV Screen Bounding Box (Traps all fixed elements inside the TV Bezel) */}
           <div 
@@ -55,19 +55,19 @@ export default function RootLayout({
             <div 
               className="fixed inset-0 pointer-events-none z-[99999] mix-blend-multiply" 
               style={{
-                boxShadow: "inset 0 0 120px rgba(0,0,0,0.8), inset 0 0 30px rgba(0,0,0,0.5)",
-                background: "radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.65) 120%)"
+                boxShadow: "inset 0 0 200px rgba(0,0,0,0.95), inset 0 0 80px rgba(0,0,0,0.8)",
+                background: "radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.8) 130%)"
               }}
             ></div>
             {/* Intense Convex center highlight */}
             <div 
               className="fixed inset-0 pointer-events-none z-[99999] opacity-70 mix-blend-screen"
               style={{
-                background: "radial-gradient(ellipse at 50% 15%, rgba(255,255,255,0.25) 0%, transparent 60%)"
+                background: "radial-gradient(ellipse at 50% 15%, rgba(255,255,255,0.3) 0%, transparent 60%)"
               }}
             ></div>
             
-            <div className="relative w-full h-full overflow-hidden">
+            <div className="relative w-full h-full overflow-hidden" style={{ transform: 'scale(0.97)', transformOrigin: 'center' }}>
               {children}
             </div>
           </div>
