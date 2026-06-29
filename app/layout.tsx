@@ -31,17 +31,6 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
       <body className="antialiased min-h-screen relative font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container crt-flicker">
         <LanguageProvider>
-          {/* Physical TV Frame Image Overlay (Covers the whole window) */}
-          <div 
-            className="fixed inset-0 pointer-events-none z-[999999]"
-            style={{
-              backgroundImage: "url('/tv-frame.png')",
-              backgroundSize: "115% 115%",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat"
-            }}
-          ></div>
-
           {/* TV Screen Bounding Box (Traps all fixed elements inside the TV Bezel) */}
           <div 
             className="fixed z-10 bg-black overflow-hidden" 
@@ -82,6 +71,17 @@ export default function RootLayout({
               {children}
             </div>
           </div>
+
+          {/* Physical TV Frame Image Overlay (Covers the whole window) */}
+          <div 
+            className="fixed inset-0 pointer-events-none z-[2147483647]"
+            style={{
+              backgroundImage: "url('/tv-frame.png')",
+              backgroundSize: "115% 115%",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat"
+            }}
+          ></div>
         </LanguageProvider>
       </body>
     </html>
