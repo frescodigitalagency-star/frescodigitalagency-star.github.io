@@ -29,11 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
-      <body className="antialiased min-h-screen relative font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container crt-flicker">
+      <body className="antialiased min-h-screen relative font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
         <LanguageProvider>
           {/* TV Screen Bounding Box (Traps all fixed elements inside the TV Bezel) */}
           <div 
-            className="fixed z-10 bg-black overflow-hidden" 
+            className="fixed z-10 bg-black overflow-hidden crt-flicker" 
             style={{
               top: '5%',
               bottom: '8%',
