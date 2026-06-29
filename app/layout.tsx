@@ -53,7 +53,21 @@ export default function RootLayout({
             }}
           ></div>
           
-          {children}
+          {/* 3D Monitor Tilt Wrapper */}
+          <div 
+            className="w-full min-h-screen overflow-x-hidden"
+            style={{ perspective: "1500px" }}
+          >
+            <div 
+              className="w-full min-h-screen origin-center"
+              style={{ 
+                transform: "rotateX(1.5deg) scale(0.995)", 
+                transformStyle: "preserve-3d" 
+              }}
+            >
+              {children}
+            </div>
+          </div>
         </LanguageProvider>
       </body>
     </html>
