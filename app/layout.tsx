@@ -46,10 +46,10 @@ export default function RootLayout({
           <div 
             className="fixed z-10 bg-black overflow-hidden" 
             style={{
-              top: '9%',
-              bottom: '12%',
-              left: '6%',
-              right: '6%',
+              top: '12%',
+              bottom: '13%',
+              left: '10%',
+              right: '10%',
               borderRadius: '2rem',
               transform: 'translate3d(0,0,0)'
             }}
