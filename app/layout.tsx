@@ -41,8 +41,8 @@ export default function RootLayout({
           <div 
             className="fixed inset-0 pointer-events-none z-[99999] mix-blend-multiply" 
             style={{
-              boxShadow: "inset 0 0 250px rgba(0,0,0,1), inset 0 0 80px rgba(0,0,0,0.8)",
-              background: "radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.85) 130%)"
+              boxShadow: "inset 0 0 120px rgba(0,0,0,0.8), inset 0 0 30px rgba(0,0,0,0.5)",
+              background: "radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.65) 120%)"
             }}
           ></div>
           {/* Intense Convex center highlight (Simulating deep curved glass bulge) */}
