@@ -36,7 +36,7 @@ export default function RootLayout({
             className="fixed inset-0 pointer-events-none z-[999999]"
             style={{
               backgroundImage: "url('/tv-frame.png')",
-              backgroundSize: "100% 100%",
+              backgroundSize: "115% 115%",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat"
             }}
@@ -46,10 +46,10 @@ export default function RootLayout({
           <div 
             className="fixed z-10 bg-black overflow-hidden" 
             style={{
-              top: '12%',
-              bottom: '13%',
-              left: '10%',
-              right: '10%',
+              top: '5%',
+              bottom: '8%',
+              left: '5%',
+              right: '5%',
               borderRadius: '2rem',
               transform: 'translate3d(0,0,0)'
             }}
