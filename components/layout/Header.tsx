@@ -98,9 +98,9 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
             {timeString}
           </div>
 
-          {/* Glitchy GIF from a movie / CCTV feed (FNAF/Saw style) */}
+          {/* Glitchy CCTV feed (using local image to prevent hotlinking errors) */}
           <img 
-            src="https://media.giphy.com/media/3o7TKSxdQJIsRX04zS/giphy.gif" 
+            src="/portfolio/POST_SURVEILLANCE_FEED.png" 
             alt="CCTV OVERRIDE" 
             className="absolute inset-0 w-full h-full object-cover grayscale opacity-70 scale-110 animate-pulse"
           />
