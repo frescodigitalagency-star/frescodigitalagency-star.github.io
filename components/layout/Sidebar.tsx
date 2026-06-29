@@ -33,7 +33,7 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
       <nav className={`
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
         md:translate-x-0 transition-transform duration-200 ease-in-out
-        flex flex-col z-40 fixed left-0 top-20 md:top-28 bottom-0 md:bottom-24 w-64 border-r border-outline bg-surface-container dark:bg-surface-container
+        flex flex-col z-40 fixed left-0 top-20 md:top-28 bottom-0 md:bottom-24 w-64 md:w-[22rem] pl-0 md:pl-16 border-r border-outline bg-surface-container dark:bg-surface-container
       `}>
         <div className="px-8 py-4 border-b border-outline mb-4">
           <div className="flex items-center gap-3 mb-2">
