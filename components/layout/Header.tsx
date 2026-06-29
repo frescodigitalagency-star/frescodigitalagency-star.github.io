@@ -34,7 +34,7 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
         {/* Mobile Burger Menu */}
         <button 
           onClick={onMenuClick}
-          className="md:hidden flex items-center justify-center p-2 mr-2 border border-outline bg-surface-container active:bg-primary active:text-on-primary cursor-pointer"
+          className="md:hidden flex items-center justify-center p-2 mr-2 border border-outline bg-surface-container active:bg-primary active:text-on-primary cursor-pointer text-[#553E16]"
         >
           <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
             menu

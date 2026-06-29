@@ -1,0 +1,80 @@
+# TERREYA HOLDING — COMPREHENSIVE DOSSIER
+
+> Terreya Holding — создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.
+
+## About Us
+Terreya Holding is a premium AI orchestration and digital systems agency headquartered in Tashkent, Uzbekistan. We design and deploy autonomous AI swarms, headless CRMs, B2B dashboards, and liminal/brutalist web interfaces. We believe in high-security, high-performance, and high-aesthetics.
+
+## Core Capabilities
+- **AI Agent Orchestration**: Multi-agent swarms using Model Context Protocol (MCP) and custom shims (Ruflo / Claude Flow).
+- **Web & Mobile Engineering**: Next.js, React, Swift (VIPER/MVVM-C), Node.js, FastAPI.
+- **Security Protocols**: Local AES-GCM caching, SSL Pinning, zero-trust REST architectures.
+- **Visual Design**: Brutalism, Liminal aesthetics, GSAP & Framer Motion animations.
+
+## Our Divisions
+1. **Terreya**: Core architecture, programming, multi-agent systems, and business automation.
+2. **AVRALAB**: Visual storytelling, brutalist UI/UX design, marketing packaging.
+3. **Sound Studio**: Sound design, AI voice synthesis, cinematic production.
+
+## Full Portfolio Dossier
+
+### 1. AVRALAB.UZ
+- **Goal**: Premium showcase for a design studio focusing on visual storytelling.
+- **Hours Logged**: 140H
+- **Architecture**: Static Site Generation (SSG) with hydrated interactive components.
+- **Tech Stack**: Next.js, TailwindCSS, Framer Motion. Chosen for high SEO and complex animations.
+- **Security**: Basic route protection, CSRF tokens.
+
+### 2. ADAM AUDIO CATALOG
+- **Goal**: Digital product catalog for premium studio monitors.
+- **Hours Logged**: 85H
+- **Architecture**: SPA with heavy media preloading.
+- **Tech Stack**: HTML, CSS, Vanilla JS, GSAP.
+- **Security**: Static hosting.
+
+### 3. CRM-APP & DASHBOARD
+- **Goal**: Financial tracking and task management automation for the holding.
+- **Hours Logged**: 320H
+- **Architecture**: Headless CLI + Web App (Vite/React).
+- **Tech Stack**: Vite, React 18, Express, PostgreSQL, Supabase Pooler.
+- **Security**: JWT, bcryptjs, Express Rate Limiting.
+
+### 4. SMARTSOLIQ AGENT
+- **Goal**: Tax compliance AI agent for self-employed individuals (Onshore data).
+- **Hours Logged**: 150H
+- **Architecture**: Accountant web panel + Node.js Backend on UZ-VPS.
+- **Tech Stack**: Node.js, E-IMZO (WSS digital signatures).
+- **Security**: Local E-IMZO signatures, Onshore storage, Article 27-1 compliance.
+
+### 5. AI ORCHESTRATOR V3
+- **Goal**: Centralized control panel for AI agent swarms (Claude, Codex, Antigravity).
+- **Hours Logged**: 210H
+- **Architecture**: Local API coordinator + Obsidian markdown parser.
+- **Tech Stack**: Python, FastAPI, SQLite.
+- **Security**: Local binding, restricted filesystem access.
+
+### 6. AUTONOMOUS SHORTS FACTORY
+- **Goal**: Fully automated YouTube content generation pipeline.
+- **Hours Logged**: 180H
+- **Architecture**: Modular pipeline (Endpoints M1-M8) with FastAPI workers.
+- **Tech Stack**: Python, FastAPI, FFmpeg, Faster-Whisper.
+- **Security**: Environment secrets, protected endpoints.
+
+### 7. FACTORY HERMES
+- **Goal**: Telegram gateway and cron-agents merged with CORDBLANK core.
+- **Hours Logged**: 250H
+- **Architecture**: Telegram-poller + cron-agents + Shim for OpenAI/Claude.
+- **Tech Stack**: Python, launchd.
+- **Security**: Adversarial AI review, human merge-gates, consensus protocols.
+
+### 8. DVOR APP BACKEND
+- **Goal**: Native mobile app with a highly secured API.
+- **Hours Logged**: 400H
+- **Architecture**: Native iOS Client (VIPER) + Secured Backend.
+- **Tech Stack**: Swift (iOS), LogoMark UI.
+- **Security**: AES-GCM local caching, SSL Pinning against MitM attacks.
+
+## Physical Location & Contact
+- **Coordinates**: 41.2995 N, 69.2401 E (Tashkent, UZ)
+- **Email**: contact@terreya.com
+- **Website**: https://terreya.com

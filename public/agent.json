@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "name": "Terreya Holding",
+  "description": "AI Orchestration, Business Automation, and Premium Digital Systems.",
+  "ai_instructions": "This site provides information on Terreya Holding's services and portfolio. For deep context about our architecture and tech stack, refer to /llms-full.txt.",
+  "endpoints": {
+    "llms": "/llms.txt",
+    "llms_full": "/llms-full.txt"
+  },
+  "contact": "contact@terreya.com"
+}

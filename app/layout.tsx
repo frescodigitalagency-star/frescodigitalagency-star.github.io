@@ -18,9 +18,22 @@ const spaceMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://terreya.com"),
   title: "TERREYA HOLDING | AI Orchestration & Digital Systems",
   description: "Terreya Holding — создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.",
   keywords: ["AI Architecture", "Digital Agency", "Business Automation", "Terreya", "ИИ автоматизация", "Разработка"],
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "TERREYA HOLDING | AI Architecture",
     description: "Надежные ИИ-системы для бизнеса.",
@@ -37,6 +50,12 @@ export const metadata: Metadata = {
     locale: "ru_RU",
     type: "website"
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "TERREYA HOLDING | AI Architecture",
+    description: "Надежные ИИ-системы для бизнеса.",
+    images: ["/portfolio/dvor.png"],
+  },
   alternates: {
     canonical: "https://terreya.com"
   }
@@ -44,7 +63,7 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "ProfessionalService"],
   "name": "Terreya Holding",
   "url": "https://terreya.com",
   "logo": "https://terreya.com/portfolio/avralab-v2.png",
@@ -54,10 +73,21 @@ const jsonLd = {
     "addressLocality": "Tashkent",
     "addressCountry": "UZ"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.2995,
+    "longitude": 69.2401
+  },
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
     "email": "contact@terreya.com"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
   }
 };
 
@@ -87,15 +117,16 @@ export default function RootLayout({
           >
             <BootSequence />
             <SystemGlitch />
-            <div className="fixed inset-0 z-0 pointer-events-none">
+            <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
               <CRTShader />
             </div>
             {/* Scanline Overlay */}
-            <div className="fixed inset-0 scanlines z-[100] pointer-events-none mix-blend-multiply"></div>
+            <div className="fixed inset-0 scanlines z-[100] pointer-events-none mix-blend-multiply" aria-hidden="true"></div>
             
             {/* Extreme CRT TV Convex Glass Reflection Overlay */}
             <div 
               className="fixed inset-0 pointer-events-none z-[99999] mix-blend-multiply" 
+              aria-hidden="true"
               style={{
                 boxShadow: "inset 0 0 30px 10px rgba(0,0,0,1), inset 0 0 200px rgba(0,0,0,0.95), inset 0 0 80px rgba(0,0,0,0.8)",
                 background: "radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.8) 130%)"
@@ -104,6 +135,7 @@ export default function RootLayout({
             {/* Intense Convex center highlight */}
             <div 
               className="fixed inset-0 pointer-events-none z-[99999] opacity-70 mix-blend-screen"
+              aria-hidden="true"
               style={{
                 background: "radial-gradient(ellipse at 50% 15%, rgba(255,255,255,0.3) 0%, transparent 60%)"
               }}
@@ -118,6 +150,7 @@ export default function RootLayout({
           {/* Physical TV Frame Image Overlay (Covers the whole window) - Hidden on Mobile */}
           <div 
             className="fixed inset-0 pointer-events-none z-[2147483647] hidden md:block"
+            aria-hidden="true"
             style={{
               backgroundImage: "url('/tv-frame.png')",
               backgroundSize: "115% 115%",

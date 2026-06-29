@@ -43,7 +43,7 @@ export default function Home() {
                 <span className="text-error animate-pulse">■</span>
                 {t("home", "welcome")}
               </h2>
-              <p className="text-[#553E16]/80 text-sm md:text-base leading-relaxed mb-8 max-w-sm">
+              <p className="text-[#553E16] text-sm md:text-base leading-relaxed mb-8 max-w-sm">
                 {t("home", "scroll")}
               </p>
               

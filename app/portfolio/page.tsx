@@ -44,8 +44,28 @@ export default function PortfolioPage() {
     setTimeout(() => setGlitch(false), 250);
   };
 
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": PORTFOLIO_ITEMS.map((item: any, index: number) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "CreativeWork",
+        "name": item.title,
+        "description": item.desc,
+        "url": item.link || "https://terreya.com/portfolio",
+        "image": "https://terreya.com" + item.src
+      }
+    }))
+  };
+
   return (
     <AppLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
       <div className="w-full max-w-6xl mx-auto flex flex-col font-data-mono">
         
         {/* CCTV Monitor Frame */}

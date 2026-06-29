@@ -1,0 +1,25 @@
+# TERREYA HOLDING
+
+> Terreya Holding — создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.
+
+## About Us
+Terreya Holding is an AI architecture and digital systems agency based in Uzbekistan. We build autonomous AI swarms, headless CRMs, B2B dashboards, and liminal/brutalist web interfaces.
+
+## Our Divisions
+- **Terreya**: Core architecture, programming, multi-agent systems, and business automation.
+- **AVRALAB**: Visual storytelling, brutalist UI/UX design, marketing packaging.
+- **Sound Studio**: Sound design, AI voice synthesis, cinematic production.
+
+## Case Studies / Portfolio
+- **AVRALAB.UZ**: Brutalist design studio showcase. Built with Next.js, Framer Motion.
+- **ADAM AUDIO CATALOG**: Premium studio monitors catalog with GSAP animations.
+- **CRM-APP & DASHBOARD**: Headless CLI + Web Dashboard for finance tracking. (Vite/React, PostgreSQL).
+- **SMARTSOLIQ AGENT**: Tax compliance AI agent for self-employed (Node.js, E-IMZO).
+- **AI ORCHESTRATOR V3**: Local daemon for coordinating agent swarms (Claude, Codex, Antigravity) via WebSocket.
+- **AUTONOMOUS SHORTS FACTORY**: Fully-automated YouTube content pipeline (FastAPI, FFmpeg, Whisper).
+- **FACTORY HERMES**: Distributed message broker and Telegram gateway with adversarial AI review.
+- **DVOR APP BACKEND**: iOS backend with local caching (AES-GCM) and SSL Pinning.
+
+## Contact
+- **Website**: https://terreya.com
+- **Services**: AI Orchestration, Web Development, Branding, Sound Design.
