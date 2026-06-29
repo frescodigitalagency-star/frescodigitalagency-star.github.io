@@ -6,7 +6,7 @@ export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="fixed bottom-0 w-full z-50 flex items-center px-8 md:px-12 justify-between h-12 border-t border-outline bg-inverse-surface dark:bg-inverse-surface text-inverse-on-surface font-data-mono text-data-mono">
+    <footer className="fixed bottom-0 w-full z-50 flex items-center px-12 md:px-24 justify-between h-12 border-t border-outline bg-inverse-surface dark:bg-inverse-surface text-inverse-on-surface font-data-mono text-data-mono">
       <div className="font-bold text-tertiary-fixed text-xs md:text-sm truncate mr-4">
         {t("footer", "status")}
       </div>
