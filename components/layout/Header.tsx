@@ -7,6 +7,7 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
   const [timeString, setTimeString] = useState("--:--:--");
   const { lang, setLang, t } = useLanguage();
   const [showVideo, setShowVideo] = useState(false);
+  const [destructCounter, setDestructCounter] = useState<number | null>(null);
 
   useEffect(() => {
     function updateClock() {
@@ -17,6 +18,13 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
     updateClock();
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (destructCounter !== null && destructCounter > 0) {
+      const timer = setTimeout(() => setDestructCounter(destructCounter - 1), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [destructCounter]);
 
   return (
     <>
@@ -74,8 +82,11 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
               videocam
             </span>
             <span
-              className="material-symbols-outlined hover:text-primary-container transition-none cursor-pointer"
+              className="material-symbols-outlined hover:text-error transition-none cursor-pointer"
               style={{ fontVariationSettings: "'FILL' 0" }}
+              onClick={() => {
+                if (destructCounter === null) setDestructCounter(10);
+              }}
             >
               radio_button_checked
             </span>
@@ -113,6 +124,46 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
           
           <div className="absolute inset-0 pointer-events-none z-20" style={{
             background: "radial-gradient(circle, transparent 30%, rgba(0,0,0,0.95) 100%)"
+          }}></div>
+        </div>
+      )}
+
+      {/* Self-Destruct Sequence */}
+      {destructCounter !== null && (
+        <div className="fixed inset-0 z-[9999999] bg-[#050505] text-[#ba1a1a] flex flex-col items-center justify-center overflow-hidden cursor-none pointer-events-auto font-data-mono">
+          {destructCounter > 0 ? (
+            <>
+              <h1 className="text-4xl md:text-6xl font-black mb-8 animate-pulse text-center tracking-tighter drop-shadow-[0_0_10px_rgba(186,26,26,0.8)]">
+                PROTOCOL: SELF-DESTRUCT
+              </h1>
+              <div className="text-[12rem] md:text-[20rem] leading-none font-black tabular-nums tracking-tighter drop-shadow-[0_0_20px_rgba(186,26,26,0.8)]">
+                {String(destructCounter).padStart(2, '0')}
+              </div>
+              <p className="mt-8 text-xl md:text-3xl font-bold opacity-80 uppercase tracking-widest">
+                {lang === "ru" ? "ИДЕТ УДАЛЕНИЕ ДАННЫХ..." : "PURGING ALL DATA..."}
+              </p>
+            </>
+          ) : (
+            <>
+              <img 
+                src="https://media.giphy.com/media/Yy29Y7A19rTbi/giphy.gif" 
+                alt="TERMINAL DESTROYED" 
+                className="absolute inset-0 w-full h-full object-cover grayscale opacity-80 mix-blend-screen"
+              />
+              <div className="z-10 text-6xl md:text-9xl font-black text-white mix-blend-difference tracking-tighter text-center">
+                SYSTEM<br/>PURGED
+              </div>
+            </>
+          )}
+          
+          {/* CRT Scanline Overlay for Destruct */}
+          <div className="absolute inset-0 pointer-events-none opacity-40 mix-blend-overlay z-20" style={{
+            backgroundImage: "linear-gradient(transparent 50%, rgba(0, 0, 0, 0.8) 50%)",
+            backgroundSize: "100% 4px"
+          }}></div>
+          
+          <div className={`absolute inset-0 pointer-events-none z-20 transition-opacity duration-1000 ${destructCounter === 0 ? 'opacity-100' : 'opacity-50'}`} style={{
+            background: destructCounter === 0 ? "rgba(0,0,0,0.5)" : "radial-gradient(circle, transparent 30%, rgba(186,26,26,0.3) 100%)"
           }}></div>
         </div>
       )}
