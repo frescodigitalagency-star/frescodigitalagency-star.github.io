@@ -29,17 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
+      <head>
+        <link rel="preload" as="image" href="/tv-frame.png" />
+      </head>
       <body className="antialiased min-h-screen relative font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container bg-black">
         <LanguageProvider>
-          {/* TV Screen Bounding Box (Expanded to bleed UNDER the TV Bezel) */}
+          {/* TV Screen Bounding Box (Expanded to bleed UNDER the TV Bezel on desktop, fullscreen on mobile) */}
           <div 
-            className="fixed z-10 bg-background overflow-hidden crt-flicker" 
+            className="fixed z-10 bg-background overflow-hidden crt-flicker inset-0 rounded-none md:inset-[1%] md:rounded-[2rem]" 
             style={{
-              top: '1%',
-              bottom: '1%',
-              left: '1%',
-              right: '1%',
-              borderRadius: '2rem',
               transform: 'translate3d(0,0,0)'
             }}
           >
@@ -67,15 +65,15 @@ export default function RootLayout({
               }}
             ></div>
             
-            {/* Inner Content Wrapper (Scaled down so UI elements don't get cut off by the thick bezel) */}
-            <div className="relative w-full h-full overflow-hidden" style={{ transform: 'scale(0.92)', transformOrigin: 'center' }}>
+            {/* Inner Content Wrapper (Scaled down so UI elements don't get cut off by the thick bezel on desktop) */}
+            <div className="relative w-full h-full overflow-hidden scale-100 md:scale-[0.92] origin-center">
               {children}
             </div>
           </div>
 
-          {/* Physical TV Frame Image Overlay (Covers the whole window) */}
+          {/* Physical TV Frame Image Overlay (Covers the whole window) - Hidden on Mobile */}
           <div 
-            className="fixed inset-0 pointer-events-none z-[2147483647]"
+            className="fixed inset-0 pointer-events-none z-[2147483647] hidden md:block"
             style={{
               backgroundImage: "url('/tv-frame.png')",
               backgroundSize: "115% 115%",

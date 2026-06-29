@@ -92,10 +92,12 @@ export default function ArchivePage() {
                 {/* Optional Image */}
                 {log.imageUrl && (
                   <div className="relative w-full aspect-video mb-6 border border-[#553E16] overflow-hidden bg-[#553E16]/5 flex items-center justify-center">
-                    <img
+                    <Image
                       src={log.imageUrl}
                       alt={log.title[lang as keyof LocalizedText] || log.title.en}
-                      className="object-contain w-full h-full grayscale group-hover:grayscale-0 mix-blend-multiply transition-all duration-700"
+                      fill
+                      unoptimized
+                      className="object-contain grayscale group-hover:grayscale-0 mix-blend-multiply transition-all duration-700"
                     />
                   </div>
                 )}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export function SystemGlitch() {
   const [isGlitching, setIsGlitching] = useState(false);
@@ -47,10 +48,12 @@ export function SystemGlitch() {
   // The glitch overlay: harsh noise, high contrast, mix-blend effects
   return (
     <div className="fixed inset-0 z-[99999998] pointer-events-none mix-blend-difference opacity-80 flex items-center justify-center">
-       <img 
+       <Image 
         src="/portfolio/POST_VHS_TRACKING_ERROR.png" 
         alt="GLITCH" 
-        className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 scale-150 animate-pulse"
+        fill
+        priority
+        className="absolute inset-0 object-cover grayscale opacity-90 scale-150 animate-pulse"
       />
       <div className="absolute inset-0 bg-white mix-blend-overlay animate-pulse opacity-50"></div>
     </div>

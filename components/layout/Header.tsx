@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import Image from "next/image";
 
 export function Header({ onMenuClick }: { onMenuClick: () => void }) {
   const [timeString, setTimeString] = useState("--:--:--");
@@ -110,10 +111,11 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
           </div>
 
           {/* Glitchy CCTV feed */}
-          <img 
+          <Image 
             src="/portfolio/POST_VHS_TRACKING_ERROR.png" 
             alt="CCTV OVERRIDE" 
-            className="absolute inset-0 w-full h-full object-cover grayscale opacity-70 scale-110 animate-pulse"
+            fill
+            className="absolute inset-0 object-cover grayscale opacity-70 scale-110 animate-pulse"
           />
 
           {/* CRT Scanline Overlay */}
@@ -145,10 +147,11 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
             </>
           ) : (
             <>
-              <img 
+              <Image 
                 src="/portfolio/POST_CORRUPTED_FILE.png" 
                 alt="TERMINAL DESTROYED" 
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-80 animate-pulse scale-110"
+                fill
+                className="absolute inset-0 object-cover grayscale opacity-80 animate-pulse scale-110"
               />
               <div className="z-10 text-6xl md:text-9xl font-black text-[#ba1a1a] drop-shadow-[0_0_20px_rgba(186,26,26,1)] tracking-tighter text-center">
                 SYSTEM<br/>PURGED

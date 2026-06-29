@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export function BootSequence() {
   const [isBooting, setIsBooting] = useState(true);
@@ -18,10 +19,12 @@ export function BootSequence() {
   return (
     <div className="fixed inset-0 z-[99999999] bg-white pointer-events-none flex items-center justify-center mix-blend-difference">
       {/* Heavy CRT noise image */}
-      <img 
+      <Image 
         src="/portfolio/POST_VHS_TRACKING_ERROR.png" 
         alt="STATIC" 
-        className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 scale-150"
+        fill
+        priority
+        className="absolute inset-0 object-cover grayscale opacity-90 scale-150"
       />
 
       {/* CRT Scanline Overlay */}
