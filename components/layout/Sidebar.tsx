@@ -34,7 +34,7 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
         md:translate-x-0 transition-transform duration-200 ease-in-out
         flex flex-col z-40 fixed left-0 top-16 bottom-0 md:bottom-12 w-64 border-r border-outline bg-surface-container dark:bg-surface-container
       `}>
-        <div className="p-4 border-b border-outline mb-4">
+        <div className="px-8 py-4 border-b border-outline mb-4">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 border border-outline flex items-center justify-center overflow-hidden">
               <img 
@@ -66,7 +66,7 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
                   onClick={onClose}
                 >
                   <Link
-                    className="flex items-center gap-3 px-4 py-3 font-data-mono text-data-mono"
+                    className="flex items-center gap-3 px-8 py-3 font-data-mono text-data-mono"
                     href={item.href}
                   >
                     <span>{name}</span>
@@ -82,7 +82,7 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
                 onClick={onClose}
               >
                 <Link
-                  className="flex items-center gap-3 px-4 py-3 font-data-mono text-data-mono"
+                  className="flex items-center gap-3 px-8 py-3 font-data-mono text-data-mono"
                   href={item.href}
                 >
                   <span>{name}</span>
@@ -91,7 +91,7 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
             );
           })}
         </ul>
-        <div className="p-4 border-t border-outline mt-auto bg-surface-container">
+        <div className="px-8 py-4 border-t border-outline mt-auto bg-surface-container">
           <a href="https://t.me/D_rag" target="_blank" rel="noopener noreferrer" onClick={onClose} className="block w-full">
             <button className="w-full py-2 px-4 border border-outline bg-surface hover:bg-primary-container text-on-surface font-data-mono text-data-mono font-bold transition-none active:translate-x-0.5 active:translate-y-0.5 shadow-[2px_2px_0px_0px_#553E16]">
               {t("sidebar", "initiate")}

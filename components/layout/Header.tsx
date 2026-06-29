@@ -28,7 +28,7 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
 
   return (
     <>
-      <header className="flex justify-between items-center w-full px-4 md:px-margin-page py-unit h-16 bg-surface dark:bg-surface text-primary dark:text-primary-fixed font-data-mono text-data-mono border-b border-outline shadow-[2px_2px_0px_0px_#553E16] fixed top-0 z-40">
+      <header className="flex justify-between items-center w-full px-8 md:px-12 py-unit h-16 bg-surface dark:bg-surface text-primary dark:text-primary-fixed font-data-mono text-data-mono border-b border-outline shadow-[2px_2px_0px_0px_#553E16] fixed top-0 z-40">
         
         {/* Mobile Burger Menu */}
         <button 
