@@ -74,20 +74,20 @@ export default function PortfolioPage() {
             }}></div>
 
             {/* OSD (On-Screen Display) */}
-            <div className="absolute top-4 left-4 md:top-8 md:left-8 flex items-center gap-3 z-10 text-white font-mono text-lg md:text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
+            <div className={`absolute top-4 left-4 md:top-8 md:left-8 flex items-center gap-3 z-10 text-white font-mono text-lg md:text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,1)] transition-all duration-100 ${glitch ? 'opacity-0 scale-110 blur-[2px]' : 'opacity-100 scale-100 blur-none'}`}>
               <span className="w-4 h-4 md:w-5 md:h-5 bg-red-600 rounded-full animate-pulse shadow-[0_0_10px_rgba(255,0,0,0.8)]"></span>
               REC
             </div>
             
-            <div className="absolute top-4 right-4 md:top-8 md:right-8 z-10 text-white font-mono text-lg md:text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
+            <div className={`absolute top-4 right-4 md:top-8 md:right-8 z-10 text-white font-mono text-lg md:text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,1)] transition-all duration-100 ${glitch ? 'opacity-0 translate-x-4 blur-[2px]' : 'opacity-100 translate-x-0 blur-none'}`}>
               CAM {String(currentIndex + 1).padStart(2, '0')}
             </div>
             
-            <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 z-10 text-white font-mono text-sm md:text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
+            <div className={`absolute bottom-4 left-4 md:bottom-8 md:left-8 z-10 text-white font-mono text-sm md:text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,1)] transition-all duration-100 ${glitch ? 'opacity-0 -translate-y-2 blur-[2px]' : 'opacity-100 translate-y-0 blur-none'}`}>
               {time || "LOADING..."}
             </div>
             
-            <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-10 text-[#00FF00] font-mono text-sm md:text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">
+            <div className={`absolute bottom-4 right-4 md:bottom-8 md:right-8 z-10 text-[#00FF00] font-mono text-sm md:text-xl drop-shadow-[0_2px_4px_rgba(0,0,0,1)] transition-all duration-100 ${glitch ? 'opacity-0 translate-y-2 blur-[2px]' : 'opacity-100 translate-y-0 blur-none'}`}>
               [ NODE: {currentItem.id} ]
             </div>
 
