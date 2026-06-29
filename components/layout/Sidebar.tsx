@@ -92,9 +92,11 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
           })}
         </ul>
         <div className="p-4 border-t border-outline mt-auto bg-surface-container">
-          <button className="w-full py-2 px-4 border border-outline bg-surface hover:bg-primary-container text-on-surface font-data-mono text-data-mono font-bold transition-none active:translate-x-0.5 active:translate-y-0.5 shadow-[2px_2px_0px_0px_#553E16]">
-            {t("sidebar", "initiate")}
-          </button>
+          <Link href="/uplink" onClick={onClose}>
+            <button className="w-full py-2 px-4 border border-outline bg-surface hover:bg-primary-container text-on-surface font-data-mono text-data-mono font-bold transition-none active:translate-x-0.5 active:translate-y-0.5 shadow-[2px_2px_0px_0px_#553E16]">
+              {t("sidebar", "initiate")}
+            </button>
+          </Link>
         </div>
       </nav>
     </>
