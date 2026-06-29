@@ -55,7 +55,7 @@ export default function RootLayout({
             <div 
               className="fixed inset-0 pointer-events-none z-[99999] mix-blend-multiply" 
               style={{
-                boxShadow: "inset 0 0 200px rgba(0,0,0,0.95), inset 0 0 80px rgba(0,0,0,0.8)",
+                boxShadow: "inset 0 0 30px 10px rgba(0,0,0,1), inset 0 0 200px rgba(0,0,0,0.95), inset 0 0 80px rgba(0,0,0,0.8)",
                 background: "radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.8) 130%)"
               }}
             ></div>
