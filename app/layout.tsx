@@ -66,8 +66,8 @@ export default function RootLayout({
               }}
             ></div>
             
-            {/* Inner Content Wrapper (Scaled down so UI elements don't get cut off by the thick bezel on desktop) */}
-            <div className="relative w-full h-full overflow-hidden scale-100 md:scale-[0.92] origin-center">
+            {/* Inner Content Wrapper */}
+            <div className="relative w-full h-full overflow-hidden">
               {children}
             </div>
           </div>
