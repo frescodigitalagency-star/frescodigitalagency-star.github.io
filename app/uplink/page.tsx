@@ -54,7 +54,7 @@ export default function UplinkPage() {
           ))}
           {!isConnected && (
             <div className="flex gap-4 animate-pulse">
-              <span className="opacity-50">[{new Date().toISOString().split('T')[1].slice(0,8)}]</span>
+              <span className="opacity-50">[--:--:--]</span>
               <span>_</span>
             </div>
           )}
