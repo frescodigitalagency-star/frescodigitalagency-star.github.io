@@ -30,15 +30,18 @@ export function SystemGlitch() {
 
   useEffect(() => {
     if (isGlitching) {
-      // Apply physical distortion to the whole site body
+      // Apply physical distortion to the TV screen bounding box instead of the whole body
+      const screen = document.getElementById('tv-screen');
+      if (!screen) return;
+      
       const skew = Math.random() > 0.5 ? 2 : -2;
       const y = Math.random() > 0.5 ? 10 : -10;
-      document.body.style.transform = `skewX(${skew}deg) translateY(${y}px)`;
-      document.body.style.filter = "contrast(150%) saturate(0.5)";
+      screen.style.transform = `translate3d(0,0,0) skewX(${skew}deg) translateY(${y}px)`;
+      screen.style.filter = "contrast(150%) saturate(0.5)";
       
       return () => {
-        document.body.style.transform = "";
-        document.body.style.filter = "";
+        screen.style.transform = "translate3d(0,0,0)";
+        screen.style.filter = "";
       };
     }
   }, [isGlitching]);

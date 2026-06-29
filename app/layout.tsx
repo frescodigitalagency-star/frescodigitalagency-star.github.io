@@ -36,6 +36,7 @@ export default function RootLayout({
         <LanguageProvider>
           {/* TV Screen Bounding Box (Expanded to bleed UNDER the TV Bezel on desktop, fullscreen on mobile) */}
           <div 
+            id="tv-screen"
             className="fixed z-10 bg-background overflow-hidden crt-flicker inset-0 rounded-none md:inset-[1%] md:rounded-[2rem]" 
             style={{
               transform: 'translate3d(0,0,0)'
