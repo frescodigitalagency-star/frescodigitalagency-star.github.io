@@ -14,39 +14,39 @@
     "link": "https://frescodigitalagency-star.github.io/adam-audio-catalog/" 
   },
   { 
-    "id": "BIOS_SETUP", 
-    "src": "/portfolio/POST_BIOS_SETUP.png", 
-    "title": "BIOS",
-    "desc": "Ретро-интерфейс в стиле BIOS. Использовался для маркетинговой кампании."
-  },
-  { 
-    "id": "SURVEILLANCE_FEED", 
+    "id": "CRM_APP", 
     "src": "/portfolio/POST_SURVEILLANCE_FEED.png", 
-    "title": "CCTV",
-    "desc": "Экспериментальный визуал с эффектом камер наблюдения. Интеграция с AR."
+    "title": "CRM-APP & DASHBOARD",
+    "desc": "Основная задеплоенная CRM система + headless-слой crm-cli для личного учёта расходов и автоматизации бизнес-процессов."
   },
   { 
-    "id": "MACRO_CRT", 
-    "src": "/portfolio/POST_MACRO_CRT.png", 
-    "title": "CRT ZOOM",
-    "desc": "Макро-съемка ЭЛТ мониторов для создания текстур и паттернов."
-  },
-  { 
-    "id": "REDACTED_DOCUMENT", 
+    "id": "SMART_SOLIQ", 
     "src": "/portfolio/POST_REDACTED_DOCUMENT.png", 
-    "title": "REDACTED",
-    "desc": "Генерация секретных документов для ARG-игры. Автоматическая цензура текста."
+    "title": "SMARTSOLIQ AGENT",
+    "desc": "Система контроля комплаенса для самозанятых. Автоматическая проверка деятельности, расчёт налогов и генерация ЭСФ."
   },
   { 
-    "id": "INTERCOM_SPEAKER", 
-    "src": "/portfolio/POST_INTERCOM_SPEAKER.png", 
-    "title": "INTERCOM",
-    "desc": "Айдентика для аудио-продакшена. Индастриал и ло-фай эстетика."
+    "id": "AI_ORCHESTRATOR", 
+    "src": "/portfolio/POST_BIOS_SETUP.png", 
+    "title": "AI ORCHESTRATOR V3",
+    "desc": "Локальная панель управления для координации автономных ИИ-агентов (Claude, Codex, Antigravity) на Mac/ПК."
   },
   { 
-    "id": "VHS_TRACKING_ERROR", 
+    "id": "SHORTS_FACTORY", 
     "src": "/portfolio/POST_VHS_TRACKING_ERROR.png", 
-    "title": "VHS ERROR",
-    "desc": "Проект с глитч-артом. Имитация ошибок трекинга VHS кассет."
+    "title": "AUTONOMOUS SHORTS FACTORY",
+    "desc": "Автономная модульная фабрика для потоковой генерации YouTube Shorts на базе AI с выделенным демоном-наблюдателем (watchdog)."
+  },
+  { 
+    "id": "FACTORY_HERMES", 
+    "src": "/portfolio/POST_INTERCOM_SPEAKER.png", 
+    "title": "FACTORY HERMES",
+    "desc": "Инфраструктура субагентов, cron-задач и Telegram-gateway, слитая с ядром фабрики CORDBLANK (adversarial review + консенсус)."
+  },
+  { 
+    "id": "DVOR", 
+    "src": "/portfolio/POST_MACRO_CRT.png", 
+    "title": "DVOR APP BACKEND",
+    "desc": "Мобильная и бэкенд-архитектура с локальным кэшированием (AES-GCM), системой ролей и защитой от MitM-атак через SSL Pinning."
   }
 ]
