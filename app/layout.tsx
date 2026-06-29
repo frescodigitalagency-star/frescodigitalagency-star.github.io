@@ -31,30 +31,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
       <body className="antialiased min-h-screen relative font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container crt-flicker">
         <LanguageProvider>
-          <BootSequence />
-          <SystemGlitch />
-          <div className="fixed inset-0 z-0 pointer-events-none">
-            <CRTShader />
-          </div>
-          {/* Scanline Overlay */}
-          <div className="fixed inset-0 scanlines z-[100] pointer-events-none mix-blend-multiply"></div>
-          
-          {/* Extreme CRT TV Convex Glass Reflection Overlay */}
-          <div 
-            className="fixed inset-0 pointer-events-none z-[99999] mix-blend-multiply" 
-            style={{
-              boxShadow: "inset 0 0 120px rgba(0,0,0,0.8), inset 0 0 30px rgba(0,0,0,0.5)",
-              background: "radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.65) 120%)"
-            }}
-          ></div>
-          {/* Intense Convex center highlight (Simulating deep curved glass bulge) */}
-          <div 
-            className="fixed inset-0 pointer-events-none z-[99999] opacity-70 mix-blend-screen"
-            style={{
-              background: "radial-gradient(ellipse at 50% 15%, rgba(255,255,255,0.25) 0%, transparent 60%)"
-            }}
-          ></div>
-          {/* Physical TV Frame Image Overlay */}
+          {/* Physical TV Frame Image Overlay (Covers the whole window) */}
           <div 
             className="fixed inset-0 pointer-events-none z-[999999]"
             style={{
@@ -64,8 +41,47 @@ export default function RootLayout({
               backgroundRepeat: "no-repeat"
             }}
           ></div>
-          
-          {children}
+
+          {/* TV Screen Bounding Box (Traps all fixed elements inside the TV Bezel) */}
+          <div 
+            className="fixed z-10 bg-black overflow-hidden" 
+            style={{
+              top: '9%',
+              bottom: '12%',
+              left: '6%',
+              right: '6%',
+              borderRadius: '2rem',
+              transform: 'translate3d(0,0,0)'
+            }}
+          >
+            <BootSequence />
+            <SystemGlitch />
+            <div className="fixed inset-0 z-0 pointer-events-none">
+              <CRTShader />
+            </div>
+            {/* Scanline Overlay */}
+            <div className="fixed inset-0 scanlines z-[100] pointer-events-none mix-blend-multiply"></div>
+            
+            {/* Extreme CRT TV Convex Glass Reflection Overlay */}
+            <div 
+              className="fixed inset-0 pointer-events-none z-[99999] mix-blend-multiply" 
+              style={{
+                boxShadow: "inset 0 0 120px rgba(0,0,0,0.8), inset 0 0 30px rgba(0,0,0,0.5)",
+                background: "radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.65) 120%)"
+              }}
+            ></div>
+            {/* Intense Convex center highlight */}
+            <div 
+              className="fixed inset-0 pointer-events-none z-[99999] opacity-70 mix-blend-screen"
+              style={{
+                background: "radial-gradient(ellipse at 50% 15%, rgba(255,255,255,0.25) 0%, transparent 60%)"
+              }}
+            ></div>
+            
+            <div className="relative w-full h-full overflow-hidden">
+              {children}
+            </div>
+          </div>
         </LanguageProvider>
       </body>
     </html>
