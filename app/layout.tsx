@@ -18,8 +18,47 @@ const spaceMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Terreya: Liminal CRT Archive",
-  description: "TERREYA HOLDING // INSTITUTIONAL ARCHIVE",
+  title: "TERREYA HOLDING | AI Orchestration & Digital Systems",
+  description: "Terreya Holding — создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.",
+  keywords: ["AI Architecture", "Digital Agency", "Business Automation", "Terreya", "ИИ автоматизация", "Разработка"],
+  openGraph: {
+    title: "TERREYA HOLDING | AI Architecture",
+    description: "Надежные ИИ-системы для бизнеса.",
+    url: "https://terreya.com",
+    siteName: "TERREYA",
+    images: [
+      {
+        url: "/portfolio/dvor.png",
+        width: 1200,
+        height: 630,
+        alt: "Terreya Architecture"
+      }
+    ],
+    locale: "ru_RU",
+    type: "website"
+  },
+  alternates: {
+    canonical: "https://terreya.com"
+  }
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Terreya Holding",
+  "url": "https://terreya.com",
+  "logo": "https://terreya.com/portfolio/avralab-v2.png",
+  "description": "ИИ-архитектура, автоматизация бизнес-процессов, макро-системы и премиальная разработка.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tashkent",
+    "addressCountry": "UZ"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "contact@terreya.com"
+  }
 };
 
 export default function RootLayout({
@@ -31,6 +70,10 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
       <head>
         <link rel="preload" as="image" href="/tv-frame.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="antialiased min-h-screen relative font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container bg-black">
         <LanguageProvider>
