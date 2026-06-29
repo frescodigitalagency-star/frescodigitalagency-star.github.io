@@ -15,7 +15,7 @@
   },
   { 
     "id": "CRM_APP", 
-    "src": "/portfolio/POST_SURVEILLANCE_FEED.png", 
+    "src": "/portfolio/crm_app.png", 
     "title": "CRM-APP & DASHBOARD",
     "desc": "Основная задеплоенная CRM система + headless-слой crm-cli для личного учёта расходов и автоматизации бизнес-процессов."
   },
@@ -45,7 +45,7 @@
   },
   { 
     "id": "DVOR", 
-    "src": "/portfolio/POST_MACRO_CRT.png", 
+    "src": "/portfolio/dvor.png", 
     "title": "DVOR APP BACKEND",
     "desc": "Мобильная и бэкенд-архитектура с локальным кэшированием (AES-GCM), системой ролей и защитой от MitM-атак через SSL Pinning."
   }
