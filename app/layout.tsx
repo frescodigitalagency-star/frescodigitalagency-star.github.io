@@ -33,7 +33,7 @@ export default function RootLayout({
         <LanguageProvider>
           <BootSequence />
           <SystemGlitch />
-          <div className="fixed inset-0 z-0">
+          <div className="fixed inset-0 z-0 pointer-events-none">
             <CRTShader />
           </div>
           {/* Scanline Overlay */}
@@ -57,7 +57,7 @@ export default function RootLayout({
           
           {/* 3D Monitor Tilt Wrapper */}
           <div 
-            className="w-full min-h-screen overflow-x-hidden"
+            className="w-full min-h-screen overflow-x-hidden relative z-10"
             style={{ perspective: "1500px" }}
           >
             <div 
