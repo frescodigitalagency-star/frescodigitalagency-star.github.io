@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { AppLayout } from "@/components/layout/AppLayout";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -185,7 +186,7 @@ export default function PortfolioPage() {
       </div>
 
       {/* Dossier Modal */}
-      {dossierOpen && currentItem.dossier && (
+      {dossierOpen && currentItem.dossier && typeof window !== "undefined" && createPortal(
         <div className="fixed inset-0 z-[9999999] bg-black/90 flex flex-col items-center justify-center p-4 md:p-12 font-data-mono">
           <div className="bg-[#B5B48B] text-[#553E16] border-4 border-[#553E16] w-full max-w-5xl shadow-[16px_16px_0_rgba(85,62,22,1)] relative crt-flicker flex flex-col max-h-full">
             
@@ -282,7 +283,8 @@ export default function PortfolioPage() {
 
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </AppLayout>
   );
