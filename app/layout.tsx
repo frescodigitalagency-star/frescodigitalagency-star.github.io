@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import { CRTShader } from "@/components/layout/CRTShader";
+import { BootSequence } from "@/components/ui/BootSequence";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import "./globals.css";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${spaceMono.variable}`}>
       <body className="antialiased min-h-screen relative font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container crt-flicker">
         <LanguageProvider>
+          <BootSequence />
           <div className="fixed inset-0 z-0">
             <CRTShader />
           </div>
