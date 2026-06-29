@@ -1,102 +1,121 @@
 "use client";
 
-import { MonitorFrame } from "@/components/ui/MonitorFrame";
+import { useState } from "react";
 import { AppLayout } from "@/components/layout/AppLayout";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { useState } from "react";
 
 export default function ManifestPage() {
   const { t } = useLanguage();
-  const [selectedBlock, setSelectedBlock] = useState<"1" | "2" | "3" | null>(null);
+  const [expandedBlock, setExpandedBlock] = useState<"1" | "2" | "3" | null>(null);
+
+  const toggleBlock = (block: "1" | "2" | "3") => {
+    setExpandedBlock(expandedBlock === block ? null : block);
+  };
 
   return (
     <AppLayout>
-      <MonitorFrame title={t("manifest", "title")} status={t("manifest", "verified")} icon="assignment">
-        <div className="text-[#553E16] font-data-mono w-full">
-          <h2 className="text-headline-md uppercase mb-6 flex items-center gap-3">
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>policy</span>
-            {t("manifest", "header")}
-          </h2>
-          
-          <div className="space-y-6 text-body-md border border-[#553E16] p-4 md:p-6 bg-[#B5B48B]/10 flex-1">
-            <div className="flex flex-col gap-2 border-b border-[#553E16]/30 pb-4">
-              <span className="font-bold opacity-70">{t("manifest", "origin")}</span>
-              <span className="text-lg md:text-xl tracking-widest">{t("manifest", "origin_val")}</span>
-            </div>
-            
-            <div className="flex flex-col gap-2 py-2">
-              <span className="font-bold opacity-70">{t("manifest", "directive")}</span>
-              <p className="leading-relaxed max-w-2xl font-bold">
-                {t("manifest", "directive_val")}
-              </p>
-            </div>
-
-            <div className="pt-4 border-t border-[#553E16] border-dashed space-y-6">
-              <button 
-                onClick={() => setSelectedBlock("1")}
-                className="w-full text-left group border-l-4 border-[#553E16] pl-4 hover:bg-[#553E16]/10 py-2 transition-colors cursor-pointer block"
-              >
-                <h3 className="font-bold uppercase tracking-widest bg-[#553E16] text-[#B5B48B] inline-block px-2 py-1 mb-2 group-hover:bg-[#B5B48B] group-hover:text-[#553E16] transition-colors">
-                  {t("manifest", "block1_title")}
-                </h3>
-                <p className="opacity-90">{t("manifest", "block1_desc")}</p>
-              </button>
-
-              <button 
-                onClick={() => setSelectedBlock("2")}
-                className="w-full text-left group border-l-4 border-[#553E16] pl-4 hover:bg-[#553E16]/10 py-2 transition-colors cursor-pointer block"
-              >
-                <h3 className="font-bold uppercase tracking-widest bg-[#553E16] text-[#B5B48B] inline-block px-2 py-1 mb-2 group-hover:bg-[#B5B48B] group-hover:text-[#553E16] transition-colors">
-                  {t("manifest", "block2_title")}
-                </h3>
-                <p className="opacity-90">{t("manifest", "block2_desc")}</p>
-              </button>
-
-              <button 
-                onClick={() => setSelectedBlock("3")}
-                className="w-full text-left group border-l-4 border-[#553E16] pl-4 hover:bg-[#553E16]/10 py-2 transition-colors cursor-pointer block"
-              >
-                <h3 className="font-bold uppercase tracking-widest bg-[#553E16] text-[#B5B48B] inline-block px-2 py-1 mb-2 group-hover:bg-[#B5B48B] group-hover:text-[#553E16] transition-colors">
-                  {t("manifest", "block3_title")}
-                </h3>
-                <p className="opacity-90">{t("manifest", "block3_desc")}</p>
-              </button>
-            </div>
+      {/* MONOLITHIC POSTER LAYOUT (Inverted Colors) */}
+      <div className="w-full max-w-5xl mx-auto flex flex-col font-data-mono bg-[#553E16] text-[#B5B48B] p-4 md:p-12 shadow-[16px_16px_0_rgba(0,0,0,0.3)]">
+        
+        {/* Massive Header */}
+        <div className="border-b-[8px] border-[#B5B48B] pb-6 mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+          <h1 className="text-6xl md:text-9xl font-black uppercase tracking-tighter leading-none mix-blend-difference">
+            {t("manifest", "title")}
+          </h1>
+          <div className="text-right flex flex-col items-start md:items-end">
+            <span className="bg-[#B5B48B] text-[#553E16] px-2 py-1 font-bold uppercase text-xs tracking-widest mb-2 animate-pulse">
+              {t("manifest", "verified")}
+            </span>
+            <span className="text-sm opacity-80 uppercase tracking-widest">
+              DOC.REF: MNFST-01
+            </span>
           </div>
         </div>
-      </MonitorFrame>
 
-      {/* Dynamic Detail Modal */}
-      {selectedBlock && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
-          onClick={() => setSelectedBlock(null)}
-        >
-          <div 
-            className="border border-[#553E16] bg-[#0A0A0A] p-6 max-w-3xl w-full text-[#B5B48B] font-data-mono relative shadow-[0_0_20px_rgba(85,62,22,0.3)]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button 
-              onClick={(e) => {
-                e.stopPropagation();
-                setSelectedBlock(null);
-              }}
-              className="absolute top-4 right-4 text-[#553E16] hover:text-[#B5B48B] transition-colors"
-            >
-              <span className="material-symbols-outlined">close</span>
-            </button>
-            <h2 className="text-2xl font-bold uppercase tracking-widest mb-6 border-b border-[#553E16]/50 pb-2 flex items-center gap-3">
-              <span className="material-symbols-outlined text-[#553E16]">
-                {selectedBlock === "1" ? "terminal" : selectedBlock === "2" ? "brush" : "graphic_eq"}
-              </span>
-              {t("manifest", `block${selectedBlock}_title`)}
+        {/* Origin & Directive */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 border-b-[4px] border-[#B5B48B]/30 pb-16">
+          
+          <div className="flex flex-col">
+            <h2 className="text-sm font-bold opacity-50 uppercase tracking-widest mb-4 border-b border-[#B5B48B]/30 pb-2">
+              {t("manifest", "origin")}
             </h2>
-            <p className="text-lg leading-relaxed opacity-90">
-              {t("manifest", `block${selectedBlock}_detail`)}
+            <div className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
+              {t("manifest", "origin_val")}
+            </div>
+            <div className="mt-8">
+              <div className="w-24 h-24 border-4 border-[#B5B48B] rounded-full flex items-center justify-center opacity-80 transform rotate-12">
+                <span className="material-symbols-outlined text-5xl">fingerprint</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex flex-col">
+            <h2 className="text-sm font-bold opacity-50 uppercase tracking-widest mb-4 border-b border-[#B5B48B]/30 pb-2">
+              {t("manifest", "directive")}
+            </h2>
+            <p className="text-xl md:text-2xl font-bold leading-snug">
+              {t("manifest", "directive_val")}
             </p>
           </div>
+
         </div>
-      )}
+
+        {/* Brutalist Accordion Blocks */}
+        <div className="flex flex-col gap-4">
+          {(["1", "2", "3"] as const).map((blockId) => (
+            <div 
+              key={blockId} 
+              className={`border-[4px] transition-all duration-300 ${
+                expandedBlock === blockId 
+                  ? "border-[#B5B48B] bg-[#B5B48B] text-[#553E16]" 
+                  : "border-[#B5B48B] hover:bg-[#B5B48B]/10"
+              }`}
+            >
+              <button 
+                onClick={() => toggleBlock(blockId)}
+                className="w-full text-left p-6 md:p-8 flex justify-between items-center outline-none cursor-pointer"
+              >
+                <div className="flex flex-col">
+                  <h3 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-2">
+                    {t("manifest", `block${blockId}_title`)}
+                  </h3>
+                  <p className={`text-sm md:text-base font-bold uppercase tracking-widest ${expandedBlock === blockId ? "opacity-100" : "opacity-60"}`}>
+                    {t("manifest", `block${blockId}_desc`)}
+                  </p>
+                </div>
+                <span className={`material-symbols-outlined text-4xl transition-transform duration-300 ${expandedBlock === blockId ? "rotate-45" : ""}`}>
+                  add
+                </span>
+              </button>
+              
+              {/* Expandable Detail Content */}
+              <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                expandedBlock === blockId ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+              }`}>
+                <div className="p-6 md:p-8 pt-0 border-t-[4px] border-[#553E16]">
+                  <p className="text-lg md:text-2xl leading-relaxed font-bold">
+                    {t("manifest", `block${blockId}_detail`)}
+                  </p>
+                  
+                  {/* Decorative barcode/stamp */}
+                  <div className="mt-8 flex items-center justify-between opacity-50">
+                    <div className="font-mono text-xs tracking-widest">SYS.ID: 0x{blockId}00F2</div>
+                    <div className="flex gap-1 h-6">
+                      <div className="w-1 bg-[#553E16]"></div>
+                      <div className="w-2 bg-[#553E16]"></div>
+                      <div className="w-1 bg-[#553E16]"></div>
+                      <div className="w-3 bg-[#553E16]"></div>
+                      <div className="w-1 bg-[#553E16]"></div>
+                      <div className="w-4 bg-[#553E16]"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
     </AppLayout>
   );
 }

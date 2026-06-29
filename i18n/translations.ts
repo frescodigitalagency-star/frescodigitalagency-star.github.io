@@ -25,12 +25,12 @@ export const translations = {
       initiate: "НАЧАТЬ СЕАНС",
     },
     home: {
-      title: "КАМ 01: ДОСТУП К ПОРОГУ",
+      title: "ДОСТУП К ПОРОГУ",
       welcome: "TERREYA HOLDING // ИНСТИТУЦИОНАЛЬНЫЙ АРХИВ. ДОСТУП РАЗРЕШЕН. СЕКТОР-04 АКТИВЕН.",
       scroll: "Используйте команды для управления.",
     },
     manifest: {
-      title: "КАМ 02: МАНИФЕСТ",
+      title: "МАНИФЕСТ",
       header: "МАНИФЕСТ // TERREYA HOLDING",
       origin: "ЦЕЛЬ СИСТЕМЫ:",
       origin_val: "ПОЛНЫЙ ЦИКЛ ПРОДУКТА ПОД КЛЮЧ",
@@ -48,7 +48,7 @@ export const translations = {
       verified: "ПОДТВЕРЖДЕНО",
     },
     archive: {
-      title: "КАМ 03: РЕЕСТР АРХИВА",
+      title: "РЕЕСТР АРХИВА",
       query: "Запрос к Реестру:",
       id: "ID",
       type: "ТИП",
@@ -56,7 +56,7 @@ export const translations = {
       searching: "ПОИСК",
     },
     protocol: {
-      title: "КАМ 04: ПРОТОКОЛ",
+      title: "ПРОТОКОЛ",
       header: "ПРОТОКОЛ БЕЗОПАСНОСТИ",
       p1: "1. НЕ ВСТУПАТЬ В КОНТАКТ С СУЩНОСТЯМИ.",
       p2: "2. ПОДДЕРЖИВАТЬ РАБОТУ ТЕРМИНАЛА.",
@@ -64,19 +64,19 @@ export const translations = {
       enforced: "ДЕЙСТВУЕТ",
     },
     portfolio: {
-      title: "КАМ 05: АРХИВ ПОРТФОЛИО",
+      title: "АРХИВ ПОРТФОЛИО",
       header: "ПРОИНДЕКСИРОВАННЫЕ ДЕЛА // 1994",
       indexed: "ИНДЕКСИРОВАНО",
     },
     uplink: {
-      title: "КАМ 06: СВЯЗЬ",
+      title: "СВЯЗЬ",
       connecting: "УСТАНОВКА СВЯЗИ...",
       ping: "ПИНГ: 999мс",
       loss: "ПОТЕРЯ ПАКЕТОВ: 8%",
       awaiting: "ОЖИДАНИЕ ВНЕШНЕГО СИГНАЛА",
     },
     services: {
-      title: "КАМ 07: СЕРВИСНЫЕ ПРОТОКОЛЫ",
+      title: "СЕРВИСНЫЕ ПРОТОКОЛЫ",
       header: "СЕРВИСЫ И РЕШЕНИЯ",
       block1: "БЛОК 1. AI-автоматизация и боты",
       b1_1_title: "1. Автоматизация бизнес-процессов (n8n + AI)",
@@ -169,12 +169,12 @@ export const translations = {
       initiate: "INITIATE UPLINK",
     },
     home: {
-      title: "CAM 01: THRESHOLD FEED",
+      title: "THRESHOLD FEED",
       welcome: "TERREYA HOLDING // INSTITUTIONAL ARCHIVE. ACCESS GRANTED. SECTOR-04 ACTIVE.",
       scroll: "Use terminal commands to navigate.",
     },
     manifest: {
-      title: "CAM 02: MANIFEST",
+      title: "MANIFEST",
       header: "MANIFEST // TERREYA HOLDING",
       origin: "SYSTEM PURPOSE:",
       origin_val: "FULL-CYCLE TURNKEY PRODUCT",
@@ -192,7 +192,7 @@ export const translations = {
       verified: "VERIFIED",
     },
     archive: {
-      title: "CAM 03: ARCHIVE REGISTRY",
+      title: "ARCHIVE REGISTRY",
       query: "Query Registry:",
       id: "ID",
       type: "TYPE",
@@ -200,7 +200,7 @@ export const translations = {
       searching: "SEARCHING",
     },
     protocol: {
-      title: "CAM 04: PROTOCOL",
+      title: "PROTOCOL",
       header: "SECURITY PROTOCOL",
       p1: "1. DO NOT ACKNOWLEDGE THE ENTITIES.",
       p2: "2. MAINTAIN TERMINAL UPTIME.",
@@ -208,19 +208,19 @@ export const translations = {
       enforced: "ENFORCED",
     },
     portfolio: {
-      title: "CAM 05: PORTFOLIO ARCHIVE",
+      title: "PORTFOLIO ARCHIVE",
       header: "INDEXED CASE STUDIES // 1994",
       indexed: "INDEXED",
     },
     uplink: {
-      title: "CAM 06: UPLINK",
+      title: "UPLINK",
       connecting: "ESTABLISHING UPLINK...",
       ping: "PING: 999ms",
       loss: "PACKET LOSS: 8%",
       awaiting: "AWAITING EXTERNAL HANDSHAKE",
     },
     services: {
-      title: "CAM 07: SERVICES PROTOCOL",
+      title: "SERVICES PROTOCOL",
       header: "SERVICES & SOLUTIONS",
       block1: "BLOCK 1. AI Automation & Bots",
       b1_1_title: "1. Business Process Automation (n8n + AI)",

@@ -3,42 +3,50 @@
     "id": "AVRALAB", 
     "src": "/portfolio/avralab.png", 
     "title": "AVRALAB.UZ", 
+    "desc": "Веб-приложение для агентства смысловой упаковки. Интеграция с CRM, дизайн в стиле brutalism.",
     "link": "https://avralab.uz/" 
   },
   { 
     "id": "ADAM_AUDIO", 
     "src": "/portfolio/adam_audio.png", 
     "title": "ADAM AUDIO CATALOG", 
+    "desc": "Цифровой каталог для студийных мониторов. Фокус на UX и плавные анимации.",
     "link": "https://frescodigitalagency-star.github.io/adam-audio-catalog/" 
   },
   { 
     "id": "BIOS_SETUP", 
     "src": "/portfolio/POST_BIOS_SETUP.png", 
-    "title": "BIOS" 
+    "title": "BIOS",
+    "desc": "Ретро-интерфейс в стиле BIOS. Использовался для маркетинговой кампании."
   },
   { 
     "id": "SURVEILLANCE_FEED", 
     "src": "/portfolio/POST_SURVEILLANCE_FEED.png", 
-    "title": "CCTV" 
+    "title": "CCTV",
+    "desc": "Экспериментальный визуал с эффектом камер наблюдения. Интеграция с AR."
   },
   { 
     "id": "MACRO_CRT", 
     "src": "/portfolio/POST_MACRO_CRT.png", 
-    "title": "CRT ZOOM" 
+    "title": "CRT ZOOM",
+    "desc": "Макро-съемка ЭЛТ мониторов для создания текстур и паттернов."
   },
   { 
     "id": "REDACTED_DOCUMENT", 
     "src": "/portfolio/POST_REDACTED_DOCUMENT.png", 
-    "title": "REDACTED" 
+    "title": "REDACTED",
+    "desc": "Генерация секретных документов для ARG-игры. Автоматическая цензура текста."
   },
   { 
     "id": "INTERCOM_SPEAKER", 
     "src": "/portfolio/POST_INTERCOM_SPEAKER.png", 
-    "title": "INTERCOM" 
+    "title": "INTERCOM",
+    "desc": "Айдентика для аудио-продакшена. Индастриал и ло-фай эстетика."
   },
   { 
     "id": "VHS_TRACKING_ERROR", 
     "src": "/portfolio/POST_VHS_TRACKING_ERROR.png", 
-    "title": "VHS ERROR" 
+    "title": "VHS ERROR",
+    "desc": "Проект с глитч-артом. Имитация ошибок трекинга VHS кассет."
   }
 ]

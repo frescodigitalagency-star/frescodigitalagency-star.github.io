@@ -54,7 +54,7 @@ export function InteractiveTerminal() {
   }, [history]);
 
   return (
-    <div className="w-full text-left font-data-mono text-data-mono text-[#553E16] mt-4 flex flex-col h-[300px]" onClick={() => inputRef.current?.focus()}>
+    <div className="w-full text-left font-data-mono text-data-mono mt-4 flex flex-col h-[300px]" onClick={() => inputRef.current?.focus()}>
       <div className="flex-1 overflow-y-auto custom-scrollbar mb-4 pr-2">
         {history.map((entry, i) => (
           <div key={i} className="mb-2">
@@ -74,7 +74,7 @@ export function InteractiveTerminal() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={onKeyDown}
-          className="bg-transparent outline-none flex-1 uppercase placeholder:text-[#553E16]/50 placeholder:normal-case"
+          className="bg-transparent outline-none flex-1 uppercase placeholder:opacity-50 placeholder:normal-case"
           placeholder={lang === "ru" ? "Чем я могу помочь? (команда help)" : "How can I help? (command help)"}
           autoFocus
         />

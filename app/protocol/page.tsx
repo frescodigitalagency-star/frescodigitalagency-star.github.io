@@ -2,7 +2,6 @@
 
 import { useState, KeyboardEvent, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { MonitorFrame } from "@/components/ui/MonitorFrame";
 import { AppLayout } from "@/components/layout/AppLayout";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -57,18 +56,12 @@ export default function ProtocolPage() {
         setPunishment(randomScenario);
         setInputCode(""); // clear input
 
-        // For scenario 2 (Turn off/on), auto reset after 2 seconds
         if (randomScenario === 2) {
           setTimeout(() => setPunishment(null), 2500);
         }
       }
     }
   };
-
-  // Dynamic classes for Easter Eggs
-  const containerClasses = `text-[#553E16] font-data-mono w-full transition-all duration-300 ${
-    isMatrixMode ? "text-[#00FF00] font-mono tracking-widest bg-black p-4" : ""
-  } ${isGlitchMode ? "animate-pulse blur-[2px] skew-x-2" : ""}`;
 
   return (
     <AppLayout>
@@ -79,14 +72,12 @@ export default function ProtocolPage() {
           {punishment === 1 && (
             <div className="fixed inset-0 z-[99999] backdrop-blur-md backdrop-contrast-200 backdrop-saturate-200 bg-white/10 pointer-events-none animate-pulse"></div>
           )}
-
           {/* SCENARIO 2: TURN OFF AND ON */}
           {punishment === 2 && (
             <div className="fixed inset-0 z-[99999] bg-black animate-pulse flex items-center justify-center">
               <div className="w-1 h-1 bg-white rounded-full animate-ping"></div>
             </div>
           )}
-
           {/* SCENARIO 3: FULL SCREEN ALERT */}
           {punishment === 3 && (
             <div className="fixed inset-0 z-[99999] bg-red-600/90 flex flex-col items-center justify-center text-black font-data-mono cursor-pointer" onClick={() => setPunishment(null)}>
@@ -95,7 +86,6 @@ export default function ProtocolPage() {
               <p className="mt-8 text-2xl font-bold border-b-2 border-black pb-1 uppercase">Click anywhere to abort</p>
             </div>
           )}
-
           {/* SCENARIO 4: FAKE 404 */}
           {punishment === 4 && (
             <div className="fixed inset-0 z-[99999] bg-blue-800 text-white font-mono flex flex-col p-8 md:p-24 cursor-pointer" onClick={() => setPunishment(null)}>
@@ -107,7 +97,6 @@ export default function ProtocolPage() {
               <p className="text-xl animate-pulse">Press any key to continue _</p>
             </div>
           )}
-
           {/* SCENARIO 5: KERNEL PANIC TEXT */}
           {punishment === 5 && (
             <div className="fixed inset-0 z-[99999] bg-black text-[#00FF00] font-mono p-4 overflow-hidden text-sm cursor-pointer opacity-90" onClick={() => setPunishment(null)}>
@@ -123,46 +112,84 @@ export default function ProtocolPage() {
         document.body
       )}
 
-      <MonitorFrame title={t("protocol", "title")} status={t("protocol", "enforced")} icon="terminal">
-        <div className={containerClasses}>
-          <h2 className={`text-headline-md uppercase mb-6 flex items-center gap-3 border-b pb-2 ${isMatrixMode ? "border-[#00FF00]" : "border-[#553E16]"}`}>
-            {!isMatrixMode && <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>gpp_maybe</span>}
-            {t("protocol", "header")}
-          </h2>
+      {/* CLASSIFIED DOSSIER / WARNING PLACARD LAYOUT */}
+      <div className={`w-full max-w-4xl mx-auto flex flex-col font-data-mono transition-all duration-300 ${
+        isMatrixMode ? "bg-black text-[#00FF00] font-mono" : "bg-[#B5B48B] text-[#553E16]"
+      } ${isGlitchMode ? "animate-pulse blur-[2px] skew-x-2" : ""}`}>
+        
+        {/* Warning / Hazard Top Border */}
+        {!isMatrixMode && (
+          <div className="h-8 w-full border-b-[4px] border-[#553E16]" style={{
+            backgroundImage: "repeating-linear-gradient(45deg, #553E16, #553E16 10px, transparent 10px, transparent 20px)"
+          }}></div>
+        )}
+
+        <div className={`border-[4px] border-t-0 p-6 md:p-12 shadow-[8px_8px_0_rgba(0,0,0,0.2)] ${
+          isMatrixMode ? "border-[#00FF00]" : "border-[#553E16]"
+        }`}>
           
-          <ul className="space-y-6 text-body-md mb-12">
-            <li className={`flex gap-4 items-start p-4 border-l-4 ${isMatrixMode ? "border-[#00FF00] bg-[#00FF00]/10" : "bg-[#553E16]/10 border-[#553E16]"}`}>
-              <span className={`font-bold mt-1 ${isMatrixMode ? "text-[#00FF00]" : "text-error animate-pulse"}`}>!</span>
-              <span>{t("protocol", "p1")}</span>
-            </li>
-            <li className={`flex gap-4 items-start p-4 border-l-4 ${isMatrixMode ? "border-[#00FF00] bg-[#00FF00]/10" : "bg-[#553E16]/10 border-[#553E16]"}`}>
-              <span className="font-bold mt-1 opacity-50">{">"}</span>
-              <span>{t("protocol", "p2")}</span>
-            </li>
-            <li className={`flex gap-4 items-start p-4 border-l-4 ${isMatrixMode ? "border-[#00FF00] bg-[#00FF00]/10" : "bg-[#553E16]/10 border-[#553E16]"}`}>
-              <span className="font-bold mt-1 opacity-50">{">"}</span>
-              <span>{t("protocol", "p3")}</span>
-            </li>
-          </ul>
+          {/* Dossier Header */}
+          <div className={`flex flex-col md:flex-row justify-between items-start md:items-end border-b-[4px] pb-6 mb-10 ${
+            isMatrixMode ? "border-[#00FF00]" : "border-[#553E16]"
+          }`}>
+            <div>
+              <div className="text-xs font-bold uppercase tracking-widest opacity-50 mb-2">
+                [ DOCUMENT ID: TR-0X-PRT ]
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter">
+                {t("protocol", "title")}
+              </h1>
+            </div>
+            
+            {!isMatrixMode && (
+              <div className="border-4 border-error text-error p-2 font-bold uppercase text-xl mt-4 md:mt-0 transform rotate-[-5deg] self-start md:self-auto">
+                RESTRICTED
+              </div>
+            )}
+          </div>
+
+          {/* Rules Section */}
+          <div className="mb-16">
+            <h2 className="text-xl font-bold uppercase mb-8 flex items-center">
+              {!isMatrixMode && <span className="material-symbols-outlined mr-4 text-3xl">warning</span>}
+              {t("protocol", "header")}
+            </h2>
+            
+            <ul className="space-y-8 text-lg">
+              <li className={`flex gap-6 items-start p-6 border-l-8 ${isMatrixMode ? "border-[#00FF00] bg-[#00FF00]/10" : "bg-[#553E16]/10 border-error"}`}>
+                <span className={`font-bold mt-1 text-2xl ${isMatrixMode ? "text-[#00FF00]" : "text-error animate-pulse"}`}>01</span>
+                <span className="font-bold uppercase leading-relaxed">{t("protocol", "p1")}</span>
+              </li>
+              <li className={`flex gap-6 items-start p-6 border-l-8 ${isMatrixMode ? "border-[#00FF00] bg-[#00FF00]/10" : "bg-[#553E16]/10 border-[#553E16]"}`}>
+                <span className="font-bold mt-1 text-2xl opacity-50">02</span>
+                <span className="leading-relaxed">{t("protocol", "p2")}</span>
+              </li>
+              <li className={`flex gap-6 items-start p-6 border-l-8 ${isMatrixMode ? "border-[#00FF00] bg-[#00FF00]/10" : "bg-[#553E16]/10 border-[#553E16]"}`}>
+                <span className="font-bold mt-1 text-2xl opacity-50">03</span>
+                <span className="leading-relaxed">{t("protocol", "p3")}</span>
+              </li>
+            </ul>
+          </div>
 
           {/* EASTER EGG TERMINAL */}
-          <div className={`mt-16 pt-8 border-t-2 border-dashed ${isMatrixMode ? "border-[#00FF00]/30" : "border-[#553E16]/30"}`}>
+          <div className={`mt-auto pt-10 border-t-[4px] border-dashed ${isMatrixMode ? "border-[#00FF00]" : "border-error"}`}>
             <div className="flex flex-col mb-4">
-              <label className="text-xs opacity-50 uppercase tracking-widest mb-2">
+              <label className={`text-sm font-bold uppercase tracking-widest mb-4 flex items-center ${isMatrixMode ? "" : "text-error"}`}>
+                <span className="material-symbols-outlined mr-2">admin_panel_settings</span>
                 [ SYSTEM OVERRIDE / MANUAL INPUT ] - PRESS ENTER
               </label>
-              <div className="flex items-center gap-4">
-                <span className={`text-xl font-bold ${isMatrixMode ? "text-[#00FF00]" : "text-error"}`}>{">"}</span>
+              <div className="flex items-center gap-4 bg-black p-4 border-2 border-transparent focus-within:border-white transition-all">
+                <span className={`text-2xl font-bold ${isMatrixMode ? "text-[#00FF00]" : "text-error"}`}>{">"}</span>
                 <input
                   type="text"
                   value={inputCode}
                   onChange={(e) => setInputCode(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder={lang === "ru" ? "ВВЕДИТЕ КОД И НАЖМИТЕ ENTER..." : "ENTER CODE AND PRESS ENTER..."}
-                  className={`bg-transparent border-b-2 outline-none w-full max-w-sm text-xl uppercase ${
+                  className={`bg-transparent outline-none w-full text-xl md:text-2xl uppercase font-mono ${
                     isMatrixMode 
-                      ? "border-[#00FF00] text-[#00FF00] placeholder-[#00FF00]/30" 
-                      : "border-[#553E16]/50 text-[#553E16] placeholder-[#553E16]/30 focus:border-[#553E16]"
+                      ? "text-[#00FF00] placeholder-[#00FF00]/30" 
+                      : "text-error placeholder-error/30"
                   }`}
                   spellCheck="false"
                   autoComplete="off"
@@ -172,22 +199,21 @@ export default function ProtocolPage() {
 
             {/* Dynamic System Output */}
             {systemMessage && (
-              <div className={`mt-6 p-4 border ${isMatrixMode ? "border-[#00FF00] bg-[#00FF00]/10 text-[#00FF00]" : "border-[#553E16] bg-[#553E16]/10 text-[#553E16]"} animate-pulse`}>
-                <span className="font-bold mr-2">SYS_RESP:</span>
-                {systemMessage}
+              <div className={`mt-6 p-6 border-4 font-bold text-xl uppercase ${isMatrixMode ? "border-[#00FF00] bg-[#00FF00]/10 text-[#00FF00]" : "border-error bg-error/10 text-error"} animate-pulse`}>
+                SYS_RESP: {systemMessage}
               </div>
             )}
             
             {/* Failure Message for Scenario 1 */}
             {punishment === 1 && (
-              <div className="mt-6 p-4 border border-error bg-error/10 text-error font-bold uppercase animate-pulse">
+              <div className="mt-6 p-6 border-4 border-error bg-error/10 text-error font-bold uppercase animate-pulse text-xl">
                 SYS_RESP: OVERLOAD DETECTED. INVALID TOKEN.
               </div>
             )}
 
             {/* Secret ASCII Logo */}
             {showTerreyaLogo && (
-              <pre className="mt-8 text-[10px] md:text-sm leading-none opacity-80 whitespace-pre overflow-x-hidden">
+              <pre className="mt-12 text-[10px] md:text-sm leading-none opacity-80 whitespace-pre overflow-x-hidden font-mono flex justify-center">
 {`
   _____  _____  ____  ____  _____  __  __  __   
  |_   _||  ___||  _ \\|  _ \\|  ___| \\ \\/ / /  \\  
@@ -201,8 +227,16 @@ export default function ProtocolPage() {
               </pre>
             )}
           </div>
+
         </div>
-      </MonitorFrame>
+        
+        {/* Warning / Hazard Bottom Border */}
+        {!isMatrixMode && (
+          <div className="h-8 w-full border-t-[4px] border-[#553E16]" style={{
+            backgroundImage: "repeating-linear-gradient(-45deg, #553E16, #553E16 10px, transparent 10px, transparent 20px)"
+          }}></div>
+        )}
+      </div>
     </AppLayout>
   );
 }
