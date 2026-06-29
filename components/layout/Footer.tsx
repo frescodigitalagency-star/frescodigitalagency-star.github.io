@@ -11,15 +11,9 @@ export function Footer() {
         {t("footer", "status")}
       </div>
       <div className="flex gap-4 md:gap-6 hidden sm:flex text-xs md:text-sm">
-        <a className="text-surface-variant hover:text-primary-fixed transition-none whitespace-nowrap" href="#">
-          {t("footer", "prompt")}
-        </a>
-        <a className="text-surface-variant hover:text-primary-fixed transition-none whitespace-nowrap" href="#">
-          {t("footer", "diagnostic")}
-        </a>
-        <a className="text-surface-variant hover:text-primary-fixed transition-none whitespace-nowrap" href="#">
-          {t("footer", "logoff")}
-        </a>
+        <div className="hidden md:block opacity-70">
+          {t("footer", "copyright")}
+        </div>
       </div>
     </footer>
   );

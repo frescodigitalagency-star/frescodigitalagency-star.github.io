@@ -15,9 +15,7 @@ export const translations = {
     },
     footer: {
       status: "СИСТЕМА АКТИВНА // ДОСТУП ОГРАНИЧЕН",
-      prompt: "Командная Строка",
-      diagnostic: "Диагностика",
-      logoff: "Выход",
+      copyright: "ВСЕ ПРАВА ЗАЩИЩЕНЫ 2026 TERREYA HOLDING",
     },
     sidebar: {
       root: "ROOT@TERREYA",
@@ -159,9 +157,7 @@ export const translations = {
     },
     footer: {
       status: "SYSTEM ACTIVE // NO UNAUTHORISED ACCESS",
-      prompt: "Root Prompt",
-      diagnostic: "Diagnostic",
-      logoff: "Logoff",
+      copyright: "ALL RIGHTS RESERVED 2026 TERREYA HOLDING",
     },
     sidebar: {
       root: "ROOT@TERREYA",
