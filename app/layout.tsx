@@ -54,6 +54,16 @@ export default function RootLayout({
               background: "radial-gradient(ellipse at 50% 15%, rgba(255,255,255,0.25) 0%, transparent 60%)"
             }}
           ></div>
+          {/* Physical TV Frame Image Overlay */}
+          <div 
+            className="fixed inset-0 pointer-events-none z-[999999]"
+            style={{
+              backgroundImage: "url('/tv-frame.png')",
+              backgroundSize: "100% 100%",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat"
+            }}
+          ></div>
           
           {children}
         </LanguageProvider>
