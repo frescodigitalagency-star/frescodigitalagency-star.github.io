@@ -146,11 +146,11 @@ export function Header({ onMenuClick }: { onMenuClick: () => void }) {
           ) : (
             <>
               <img 
-                src="https://media.giphy.com/media/Yy29Y7A19rTbi/giphy.gif" 
+                src="/portfolio/POST_SURVEILLANCE_FEED.png" 
                 alt="TERMINAL DESTROYED" 
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-80 mix-blend-screen"
+                className="absolute inset-0 w-full h-full object-cover grayscale opacity-80 animate-pulse scale-110"
               />
-              <div className="z-10 text-6xl md:text-9xl font-black text-white mix-blend-difference tracking-tighter text-center">
+              <div className="z-10 text-6xl md:text-9xl font-black text-[#ba1a1a] drop-shadow-[0_0_20px_rgba(186,26,26,1)] tracking-tighter text-center">
                 SYSTEM<br/>PURGED
               </div>
             </>
