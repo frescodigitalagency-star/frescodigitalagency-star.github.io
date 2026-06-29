@@ -5,16 +5,7 @@ import Image from "next/image";
 import { AppLayout } from "@/components/layout/AppLayout";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-// Reading from public/portfolio
-const PORTFOLIO_ITEMS = [
-  { id: "ADAM_AUDIO", src: "https://www.adam-audio.com/content/uploads/2018/03/adam-audio-t5v-studio-monitor-speaker-front-1024x1024.png", title: "ADAM AUDIO CATALOG", link: "https://frescodigitalagency-star.github.io/adam-audio-catalog/" },
-  { id: "BIOS_SETUP", src: "/portfolio/POST_BIOS_SETUP.png", title: "BIOS" },
-  { id: "SURVEILLANCE_FEED", src: "/portfolio/POST_SURVEILLANCE_FEED.png", title: "CCTV" },
-  { id: "MACRO_CRT", src: "/portfolio/POST_MACRO_CRT.png", title: "CRT ZOOM" },
-  { id: "REDACTED_DOCUMENT", src: "/portfolio/POST_REDACTED_DOCUMENT.png", title: "REDACTED" },
-  { id: "INTERCOM_SPEAKER", src: "/portfolio/POST_INTERCOM_SPEAKER.png", title: "INTERCOM" },
-  { id: "VHS_TRACKING_ERROR", src: "/portfolio/POST_VHS_TRACKING_ERROR.png", title: "VHS ERROR" }
-];
+import PORTFOLIO_ITEMS from "@/data/portfolio.json";
 
 export default function PortfolioPage() {
   const { t } = useLanguage();
@@ -30,14 +21,22 @@ export default function PortfolioPage() {
             {PORTFOLIO_ITEMS.map((item) => {
               const content = (
                 <>
-                  <div className="relative aspect-[4/5] w-full overflow-hidden border border-[#553E16]/50 grayscale group-hover:grayscale-0 transition-all duration-500 bg-black/5">
-                    <Image 
-                      src={item.src}
-                      alt={item.title}
-                      fill
-                      className="object-cover mix-blend-multiply p-4"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
+                  <div className={`relative aspect-[4/5] w-full overflow-hidden border border-[#553E16]/50 transition-all duration-500 ${['ADAM_AUDIO', 'AVRALAB'].includes(item.id) ? 'bg-[#553E16]/10' : 'grayscale group-hover:grayscale-0 bg-black/5'}`}>
+                    {['ADAM_AUDIO', 'AVRALAB'].includes(item.id) ? (
+                      <img 
+                        src={item.src}
+                        alt={item.title}
+                        className={`object-cover w-full h-full ${item.id === 'ADAM_AUDIO' ? 'object-left-top' : ''}`}
+                      />
+                    ) : (
+                      <Image 
+                        src={item.src}
+                        alt={item.title}
+                        fill
+                        className="object-cover mix-blend-multiply"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    )}
                   </div>
                   <div className="mt-2 text-interface-label font-data-mono font-bold">
                     {item.title}

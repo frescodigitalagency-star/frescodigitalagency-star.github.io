@@ -1,0 +1,44 @@
+[
+  { 
+    "id": "AVRALAB", 
+    "src": "/portfolio/avralab.png", 
+    "title": "AVRALAB.UZ", 
+    "link": "https://avralab.uz/" 
+  },
+  { 
+    "id": "ADAM_AUDIO", 
+    "src": "/portfolio/adam_audio.png", 
+    "title": "ADAM AUDIO CATALOG", 
+    "link": "https://frescodigitalagency-star.github.io/adam-audio-catalog/" 
+  },
+  { 
+    "id": "BIOS_SETUP", 
+    "src": "/portfolio/POST_BIOS_SETUP.png", 
+    "title": "BIOS" 
+  },
+  { 
+    "id": "SURVEILLANCE_FEED", 
+    "src": "/portfolio/POST_SURVEILLANCE_FEED.png", 
+    "title": "CCTV" 
+  },
+  { 
+    "id": "MACRO_CRT", 
+    "src": "/portfolio/POST_MACRO_CRT.png", 
+    "title": "CRT ZOOM" 
+  },
+  { 
+    "id": "REDACTED_DOCUMENT", 
+    "src": "/portfolio/POST_REDACTED_DOCUMENT.png", 
+    "title": "REDACTED" 
+  },
+  { 
+    "id": "INTERCOM_SPEAKER", 
+    "src": "/portfolio/POST_INTERCOM_SPEAKER.png", 
+    "title": "INTERCOM" 
+  },
+  { 
+    "id": "VHS_TRACKING_ERROR", 
+    "src": "/portfolio/POST_VHS_TRACKING_ERROR.png", 
+    "title": "VHS ERROR" 
+  }
+]

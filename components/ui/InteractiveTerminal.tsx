@@ -74,7 +74,8 @@ export function InteractiveTerminal() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={onKeyDown}
-          className="bg-transparent outline-none flex-1 uppercase"
+          className="bg-transparent outline-none flex-1 uppercase placeholder:text-[#553E16]/50 placeholder:normal-case"
+          placeholder={lang === "ru" ? "Чем я могу помочь? (команда help)" : "How can I help? (command help)"}
           autoFocus
         />
       </div>

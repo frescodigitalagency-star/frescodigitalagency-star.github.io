@@ -1,0 +1,50 @@
+[
+  {
+    "id": "LOG-01",
+    "date": "2026-06-28 14:00:00",
+    "title": {
+      "ru": "ИНИЦИАЛИЗАЦИЯ НОВОГО ПРОТОКОЛА",
+      "en": "INITIATION OF NEW PROTOCOL"
+    },
+    "content": {
+      "ru": "Система была успешно обновлена для адаптации к новым структурным изменениям. Все устаревшие данные надежно заархивированы. Мы отслеживаем стабильность базовой сети. На данный момент аномалий не обнаружено.",
+      "en": "The system has been successfully updated to accommodate the new structural changes. All legacy data has been securely archived. We are monitoring the stability of the core network. No anomalies detected at this time."
+    },
+    "imageUrl": "/portfolio/POST_MACRO_CRT.png",
+    "links": [
+      {
+        "label": { "ru": "СМОТРЕТЬ МАНИФЕСТ", "en": "VIEW MANIFEST" },
+        "url": "/manifest"
+      },
+      {
+        "label": { "ru": "СТАТУС СИСТЕМЫ", "en": "SYSTEM STATUS" },
+        "url": "/"
+      }
+    ]
+  },
+  {
+    "id": "LOG-02",
+    "date": "2026-06-25 09:12:45",
+    "title": {
+      "ru": "ОБНАРУЖЕНА ПОПЫТКА НЕСАНКЦИОНИРОВАННОГО ДОСТУПА",
+      "en": "UNAUTHORIZED ACCESS ATTEMPT DETECTED"
+    },
+    "content": {
+      "ru": "Зафиксирована попытка взлома на узле 88.X.01. Протоколы брандмауэра автоматически активировались и изолировали уязвимый подсектор. В настоящий момент комитет наблюдателей проводит полный аудит инцидента. Все стандартные операции функционируют в штатном режиме.",
+      "en": "A breach attempt was logged at Node 88.X.01. The firewall protocols automatically engaged and isolated the affected sub-sector. A full audit of the event is currently underway by the overseer committee. All standard operations remain unaffected."
+    }
+  },
+  {
+    "id": "LOG-03",
+    "date": "2026-06-15 18:30:00",
+    "title": {
+      "ru": "РАЗВЕРТЫВАНИЕ АРХИВА ЗАВЕРШЕНО",
+      "en": "ARCHIVE DEPLOYMENT COMPLETED"
+    },
+    "content": {
+      "ru": "Старые архивы физически защищены и оцифрованы. Прямой поток данных теперь доступен для персонала с 4-м уровнем допуска. Запрещается передавать внешние ссылки за пределы охраняемого периметра.",
+      "en": "The old archives have been physically secured and digitized. The raw data stream is now available for personnel with Level-4 clearance. Do not share external links outside the secure perimeter."
+    },
+    "imageUrl": "/portfolio/POST_SURVEILLANCE_FEED.png"
+  }
+]

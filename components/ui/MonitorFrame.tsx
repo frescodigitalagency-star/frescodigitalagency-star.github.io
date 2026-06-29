@@ -2,7 +2,7 @@ import React from "react";
 
 export function MonitorFrame({ children, title = "CAM FEED", status = "OPTIMAL", icon = "visibility" }: { children: React.ReactNode, title?: string, status?: string, icon?: string }) {
   return (
-    <div className="w-full max-w-3xl bg-surface-container-low border border-[#553E16] shadow-[4px_4px_0px_0px_#553E16] flex flex-col">
+    <div className="w-full max-w-3xl bg-surface-container-low border border-[#553E16] shadow-[4px_4px_0px_0px_#553E16] flex flex-col max-h-[calc(100vh-8rem)]">
       {/* Terminal Header */}
       <div className="bg-[#A1A06A] text-on-primary-fixed border-b border-[#553E16] px-4 py-2 flex justify-between items-center">
         <span className="font-data-mono text-data-mono font-bold uppercase tracking-wider">
@@ -17,7 +17,7 @@ export function MonitorFrame({ children, title = "CAM FEED", status = "OPTIMAL",
       </div>
       
       {/* Terminal Body */}
-      <div className="p-6 md:p-12 min-h-[300px] flex items-center justify-center bg-surface-dim relative overflow-hidden">
+      <div className="p-6 md:p-12 min-h-[300px] flex-1 flex flex-col bg-surface-dim relative overflow-hidden">
         {/* Subtle background image acting as 'feed' */}
         <div
           className="absolute inset-0 opacity-20 bg-cover bg-center mix-blend-luminosity grayscale"
@@ -28,7 +28,7 @@ export function MonitorFrame({ children, title = "CAM FEED", status = "OPTIMAL",
           }}
         ></div>
         
-        <div className="relative z-10 w-full">
+        <div className="relative z-10 w-full overflow-y-auto custom-scrollbar flex-1 flex flex-col pr-2">
           {children}
         </div>
       </div>

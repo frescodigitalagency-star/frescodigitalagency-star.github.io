@@ -18,7 +18,7 @@ export default function ManifestPage() {
             {t("manifest", "header")}
           </h2>
           
-          <div className="space-y-6 text-body-md border border-[#553E16] p-4 md:p-6 bg-[#B5B48B]/10 max-h-[60vh] overflow-y-auto custom-scrollbar">
+          <div className="space-y-6 text-body-md border border-[#553E16] p-4 md:p-6 bg-[#B5B48B]/10 flex-1">
             <div className="flex flex-col gap-2 border-b border-[#553E16]/30 pb-4">
               <span className="font-bold opacity-70">{t("manifest", "origin")}</span>
               <span className="text-lg md:text-xl tracking-widest">{t("manifest", "origin_val")}</span>
