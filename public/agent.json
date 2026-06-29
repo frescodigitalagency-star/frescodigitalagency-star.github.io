@@ -5,7 +5,10 @@
   "ai_instructions": "This site provides information on Terreya Holding's services and portfolio. For deep context about our architecture and tech stack, refer to /llms-full.txt.",
   "endpoints": {
     "llms": "/llms.txt",
-    "llms_full": "/llms-full.txt"
+    "llms_full": "/llms-full.txt",
+    "pricing": "/pricing.md",
+    "portfolio_data": "/api/portfolio",
+    "archive_data": "/api/archive"
   },
   "contact": "contact@terreya.com"
 }
