@@ -1,8 +1,8 @@
 [
-  { 
-    "id": "AVRALAB", 
-    "src": "/portfolio/avralab-v2.png", 
-    "title": "AVRALAB.UZ", 
+  {
+    "id": "AVRALAB",
+    "src": "/portfolio/avralab-v2.png",
+    "title": "AVRALAB.UZ",
     "desc": "Студия визуальной и смысловой упаковки. Интеграция с CRM, дизайн в стиле brutalism.",
     "link": "https://avralab.uz/",
     "dossier": {
@@ -11,13 +11,18 @@
       "architecture": "Статическая генерация (SSG) с гидратацией интерактивных компонентов.",
       "stack": "Next.js, TailwindCSS, Framer Motion. Выбор обусловлен необходимостью сложной анимации и высокого SEO.",
       "security": "Базовая защита роутов, CSRF токены для форм обратной связи.",
-      "devTerms": ["Brutalism UI", "SSG", "Micro-interactions", "Framer Motion"]
+      "devTerms": [
+        "Brutalism UI",
+        "SSG",
+        "Micro-interactions",
+        "Framer Motion"
+      ]
     }
   },
-  { 
-    "id": "ADAM_AUDIO", 
-    "src": "/portfolio/adam_audio.png", 
-    "title": "ADAM AUDIO CATALOG", 
+  {
+    "id": "ADAM_AUDIO",
+    "src": "/portfolio/adam_audio.png",
+    "title": "ADAM AUDIO CATALOG",
     "desc": "Цифровой каталог для студийных мониторов. Фокус на UX и плавные анимации.",
     "link": "https://frescodigitalagency-star.github.io/adam-audio-catalog/",
     "dossier": {
@@ -26,12 +31,17 @@
       "architecture": "Одностраничное приложение с предзагрузкой медиа-ассетов.",
       "stack": "HTML, CSS, JS, GSAP. Идеально для тяжелых timeline-анимаций без оверхеда фреймворков.",
       "security": "Статика (GitHub Pages).",
-      "devTerms": ["Vanilla JS", "GSAP Timeline", "Preloading", "DOM Animations"]
+      "devTerms": [
+        "Vanilla JS",
+        "GSAP Timeline",
+        "Preloading",
+        "DOM Animations"
+      ]
     }
   },
-  { 
-    "id": "CRM_APP", 
-    "src": "/portfolio/crm_app.png", 
+  {
+    "id": "CRM_APP",
+    "src": "/portfolio/crm_app.png",
     "title": "CRM-APP & DASHBOARD",
     "desc": "Основная задеплоенная CRM система + headless-слой crm-cli для личного учёта расходов и автоматизации бизнес-процессов.",
     "dossier": {
@@ -40,12 +50,17 @@
       "architecture": "Headless CLI слой + Web App (Vite/React). Два разных хранилища с похожей схемой.",
       "stack": "Vite/React 18 + Express + PostgreSQL (Supabase pooler). JWT, bcryptjs, zod, express-rate-limit.",
       "security": "JWT-авторизация, bcrypt шифрование, ограничение запросов (Rate Limiting).",
-      "devTerms": ["Headless CLI", "Vite", "Zod", "Supabase Pooler"]
+      "devTerms": [
+        "Headless CLI",
+        "Vite",
+        "Zod",
+        "Supabase Pooler"
+      ]
     }
   },
-  { 
-    "id": "SMART_SOLIQ", 
-    "src": "/portfolio/POST_REDACTED_DOCUMENT.png", 
+  {
+    "id": "SMART_SOLIQ",
+    "src": "/portfolio/POST_REDACTED_DOCUMENT.png",
     "title": "SMARTSOLIQ AGENT",
     "desc": "Система контроля комплаенса для самозанятых. Автоматическая проверка деятельности, расчёт налогов и генерация ЭСФ.",
     "dossier": {
@@ -54,12 +69,17 @@
       "architecture": "Веб-панель бухгалтера (с подписью ЭСФ через браузер) + Node.js Backend на UZ-VPS.",
       "stack": "Node.js (Backend) + E-IMZO (браузерный WSS для цифровых подписей). Соответствует ст. 27-1.",
       "security": "E-IMZO локальная подпись, onshore хранение данных, compliance 27-1.",
-      "devTerms": ["E-IMZO", "UZ-VPS", "Data Compliance", "WSS"]
+      "devTerms": [
+        "E-IMZO",
+        "UZ-VPS",
+        "Data Compliance",
+        "WSS"
+      ]
     }
   },
-  { 
-    "id": "AI_ORCHESTRATOR", 
-    "src": "/portfolio/POST_BIOS_SETUP.png", 
+  {
+    "id": "AI_ORCHESTRATOR",
+    "src": "/portfolio/POST_BIOS_SETUP.png",
     "title": "AI ORCHESTRATOR V3",
     "desc": "Локальная панель управления для координации автономных ИИ-агентов (Claude, Codex, Antigravity) на Mac/ПК.",
     "dossier": {
@@ -68,12 +88,17 @@
       "architecture": "Локальный API координатор + парсер Obsidian.",
       "stack": "Python, FastAPI, SQLite. Идеален для быстрых эндпоинтов и взаимодействия с ИИ.",
       "security": "Локальный биндинг, ограниченный доступ к файловой системе.",
-      "devTerms": ["FastAPI", "Agent Flock", "Markdown Parser", "Local Daemon"]
+      "devTerms": [
+        "FastAPI",
+        "Agent Flock",
+        "Markdown Parser",
+        "Local Daemon"
+      ]
     }
   },
-  { 
-    "id": "SHORTS_FACTORY", 
-    "src": "/portfolio/POST_VHS_TRACKING_ERROR.png", 
+  {
+    "id": "SHORTS_FACTORY",
+    "src": "/portfolio/POST_VHS_TRACKING_ERROR.png",
     "title": "AUTONOMOUS SHORTS FACTORY",
     "desc": "Автономная модульная фабрика для потоковой генерации YouTube Shorts на базе AI с выделенным демоном-наблюдателем (watchdog).",
     "dossier": {
@@ -82,12 +107,17 @@
       "architecture": "Пайплайн (Модули M1-M8 как эндпоинты) с FastAPI воркерами.",
       "stack": "Python, FastAPI, FFmpeg, Faster-Whisper. Стандарт для видео-процессинга и AI-транскрипции.",
       "security": "Секретные ключи в локальных env, защита эндпоинтов.",
-      "devTerms": ["FastAPI Worker", "FFmpeg Pipeline", "Faster-Whisper", "Watchdog"]
+      "devTerms": [
+        "FastAPI Worker",
+        "FFmpeg Pipeline",
+        "Faster-Whisper",
+        "Watchdog"
+      ]
     }
   },
-  { 
-    "id": "FACTORY_HERMES", 
-    "src": "/portfolio/POST_INTERCOM_SPEAKER.png", 
+  {
+    "id": "FACTORY_HERMES",
+    "src": "/portfolio/POST_INTERCOM_SPEAKER.png",
     "title": "FACTORY HERMES",
     "desc": "Инфраструктура субагентов, cron-задач и Telegram-gateway, слитая с ядром фабрики CORDBLANK (adversarial review + консенсус).",
     "dossier": {
@@ -96,12 +126,17 @@
       "architecture": "Telegram-poller + cron-агенты + Shim для Claude/OpenAI.",
       "stack": "Python (telegram_poller.py, claude_openai_shim.py), launchd.",
       "security": "Adversarial review (AI проверяет AI), Human merge-gate, Аудируемый консенсус.",
-      "devTerms": ["Telegram Gateway", "Shim", "Adversarial Review", "Consensus Protocol"]
+      "devTerms": [
+        "Telegram Gateway",
+        "Shim",
+        "Adversarial Review",
+        "Consensus Protocol"
+      ]
     }
   },
-  { 
-    "id": "DVOR", 
-    "src": "/portfolio/dvor.png", 
+  {
+    "id": "DVOR",
+    "src": "/portfolio/dvor.png",
     "title": "DVOR APP BACKEND",
     "desc": "Мобильная и бэкенд-архитектура с локальным кэшированием (AES-GCM), системой ролей и защитой от MitM-атак через SSL Pinning.",
     "dossier": {
@@ -110,7 +145,41 @@
       "architecture": "Нативный iOS клиент (MVVM-C / VIPER) + Защищенный бэкенд.",
       "stack": "Swift (iOS), LogoMark UI. Оптимизировано для Apple Ecosystem.",
       "security": "Локальное кэширование AES-GCM, SSL Pinning против MitM.",
-      "devTerms": ["SwiftUI", "VIPER", "SSL Pinning", "AES-GCM"]
+      "devTerms": [
+        "SwiftUI",
+        "VIPER",
+        "SSL Pinning",
+        "AES-GCM"
+      ]
+    }
+  },
+  {
+    "id": "AUTO_CASE_1782845260",
+    "src": "/portfolio/post_website_1782845212.png",
+    "title": "SMM AUTONOMOUS FACTORY IMPLEMENTATION FOR TERREYA",
+    "desc": "Разработка и внедрение автономной AI-фабрики контента для SMM, использующей LLM-системы и автоматизированные рабочие процессы для генерации, управления и публикации контента.",
+    "dossier": {
+      "goal": "Снижение операционных расходов, сокращение времени на создание и публикацию SMM-контента, а также оптимизация распределения ресурсов за счет автоматизации процессов идегенерации, драфтинга и управления контентом.",
+      "hours": 120,
+      "architecture": "Модульная архитектура, включающая кастомный AI-агент фреймворк для автономного управления контент-календарем, LLM-драйвер для генерации контента и интеграцию с n8n для автоматизации рабочих процессов и планирования. Система использует prompt-driven подход для создания черновиков, соответствующих брендбуку и проходящих первичную валидацию.",
+      "stack": [
+        "AI Agents Framework",
+        "Large Language Models (LLM)",
+        "n8n (Workflow Automation)",
+        "Prompt Engineering",
+        "API Integrations"
+      ],
+      "security": "Управление доступом к LLM API-ключам, валидация генерируемого контента на соответствие этическим нормам и брендбуку, минимизация передачи чувствительных данных в промпты, контроль доступа к n8n-workflow.",
+      "devTerms": [
+        "AI Agent Framework",
+        "LLM-driven pipeline",
+        "n8n workflows",
+        "Prompt Engineering",
+        "Content Calendar Automation",
+        "Time-to-Publish",
+        "Automated Ideation",
+        "Resource Allocation Optimization"
+      ]
     }
   }
 ]
