@@ -181,5 +181,44 @@
         "Resource Allocation Optimization"
       ]
     }
+  },
+  {
+    "id": "AUTO_CASE_1783005325",
+    "src": "/portfolio/placeholder.png",
+    "title": "SMM AI AGENT FOR CROSS-PLATFORM CONTENT ADAPTATION",
+    "desc": "Development and implementation of an AI agent for automated cross-platform content adaptation and publication, significantly reducing manual SMM efforts.",
+    "dossier": {
+      "goal": "Automate routine content adaptation and publication across multiple social media platforms to reduce operational costs, increase content output, and free SMM specialists for strategic tasks.",
+      "hours": 120,
+      "architecture": "The architecture comprises an n8n low-code orchestrator as the central workflow engine, integrating with an LLM (e.g., OpenAI GPT-4) for content analysis and adaptation. The LLM utilizes `TextAnalyzer` for content evaluation and `ContentAdapter` for platform-specific text generation. Optionally, an `ImageProcessor` can adapt existing visuals, or `ImageGenerator` (e.g., DALL-E 3) can create new ones. Publication is managed via custom n8n nodes or standard API integrations (Telegram API, Meta Graph API, LinkedIn API, X API). The system is triggered by new content in a source channel and provides monitoring/reporting capabilities into BI systems or spreadsheets.",
+      "stack": [
+        "OpenAI GPT-4 (LLM)",
+        "n8n (Low-code Orchestrator)",
+        "DALL-E 3 (Image Generation)",
+        "Telegram API",
+        "Meta Graph API (Instagram, Threads)",
+        "LinkedIn API",
+        "X API",
+        "Custom n8n nodes",
+        "BI System / Google Sheets"
+      ],
+      "security": "Secure API integrations using OAuth 2.0 or API keys, managed via environment variables or secret vaults. Data processing is transient, focusing on content transformation without long-term storage of sensitive information. Access to n8n instance and LLM services is controlled via granular permissions. Adherence to platform-specific data policies and LLM usage guidelines ensures data privacy during processing.",
+      "devTerms": [
+        "AI Agent",
+        "LLM (Large Language Model)",
+        "n8n",
+        "Low-code Orchestrator",
+        "API Integration",
+        "Cross-posting",
+        "Content Adaptation",
+        "GPT-4",
+        "DALL-E 3",
+        "Workflow Automation",
+        "Meta Graph API",
+        "LinkedIn API",
+        "X API",
+        "Custom Nodes"
+      ]
+    }
   }
 ]
