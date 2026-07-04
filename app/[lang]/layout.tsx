@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     metadataBase: new URL("https://terreya.com"),
     title: "TERREYA HOLDING | AI Orchestration & Digital Systems",
-    description: "Terreya Holding — создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.",
+    description: "Terreya Holding - создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.",
     keywords: ["AI Architecture", "Digital Agency", "Business Automation", "Terreya", "ИИ автоматизация", "Разработка"],
     robots: {
       index: true,

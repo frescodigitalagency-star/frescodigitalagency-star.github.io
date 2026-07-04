@@ -121,10 +121,18 @@ export default function ServicesPage() {
                   </button>
                 ))}
               </div>
-              <div className="mt-auto pt-6 text-xs font-bold opacity-50 border-t-2 border-[#553E16] border-dashed">
-                [ {t("services", "available")} ]
-                <br/>
-                {t("services", "support")}
+              <div className="mt-auto pt-6 border-t-2 border-[#553E16] border-dashed flex flex-col gap-3">
+                <div className="border-2 border-error bg-error/10 p-3 shadow-[3px_3px_0_rgba(0,0,0,0.15)]">
+                  <div className="font-bold uppercase text-xs text-error mb-1 tracking-wide">
+                    {t("services", "scan_title")}
+                  </div>
+                  <p className="text-xs opacity-80 leading-relaxed">{t("services", "scan_desc")}</p>
+                </div>
+                <div className="text-xs font-bold opacity-50">
+                  [ {t("services", "available")} ]
+                  <br/>
+                  {t("services", "support")}
+                </div>
               </div>
             </nav>
 

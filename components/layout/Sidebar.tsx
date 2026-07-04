@@ -18,7 +18,7 @@ const NAV_KEYS = [
 export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) {
   const pathname = usePathname();
   const { t, lang } = useLanguage();
-  // Static export has no middleware to prepend the locale — links must carry it
+  // Static export has no middleware to prepend the locale - links must carry it
   const localeHref = (href: string) => (href === "/" ? `/${lang}` : `/${lang}${href}`);
   const cleanPathname = pathname.replace(/\/+$/, "") || "/";
 

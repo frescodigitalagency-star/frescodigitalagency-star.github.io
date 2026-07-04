@@ -1,4 +1,7 @@
-# Pricing & Services — Terreya Holding
+# Pricing & Services - Terreya Holding
+
+## Start Here: SECTOR SCAN (free)
+Free express audit of one process. 30 minutes, and you get a process map, 3 money leaks and the first fix. No system access, no rollout. Request it in the UPLINK section. Limited scans per week.
 
 ## Block 1: AI Automation & Bots
 - **Business Process Automation (n8n + AI)**: From $300 | 3-7 days. Audit, scenario setup, CRM linkage.

@@ -1,6 +1,6 @@
-# TERREYA HOLDING — COMPREHENSIVE DOSSIER
+# TERREYA HOLDING - COMPREHENSIVE DOSSIER
 
-> Terreya Holding — создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.
+> Terreya Holding - создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.
 
 ## About Us
 Terreya Holding is a premium AI orchestration and digital systems agency headquartered in Tashkent, Uzbekistan. We design and deploy autonomous AI swarms, headless CRMs, B2B dashboards, and liminal/brutalist web interfaces. We believe in high-security, high-performance, and high-aesthetics.
@@ -73,6 +73,15 @@ Terreya Holding is a premium AI orchestration and digital systems agency headqua
 - **Architecture**: Native iOS Client (VIPER) + Secured Backend.
 - **Tech Stack**: Swift (iOS), LogoMark UI.
 - **Security**: AES-GCM local caching, SSL Pinning against MitM attacks.
+
+## Engagement Model
+Entry point is SECTOR SCAN, a free express audit of one process: 30 minutes, and you get a process map, 3 money leaks and the first fix. No system access, no rollout at this stage. It is the front door to the ladder:
+1. **SECTOR SCAN** - free express audit of one process (lead magnet).
+2. **PROCESS MAP** - paid diagnostics: full process map, architecture plan, cost of manual chaos per month.
+3. **PILOT AGENT** - one agent on one process, 2-4 weeks, with memory, approval gate, logs, stop-rules, before/after metrics.
+4. **FULL CONTOUR** - turnkey multi-agent system across connected processes.
+5. **CONTROL ROOM** - monthly retainer: monitoring, incident handling, growth.
+Request the audit through the UPLINK section of the site.
 
 ## Physical Location & Contact
 - **Coordinates**: 41.2995 N, 69.2401 E (Tashkent, UZ)

@@ -2,10 +2,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Портфолио — TERREYA HOLDING | 8 Реальных Кейсов",
+  title: "Портфолио - TERREYA HOLDING | 8 Реальных Кейсов",
   description: "Портфолио Terreya Holding: CRM-системы, iOS-приложения с AES-шифрованием, AI-оркестраторы, YouTube-фабрики, Telegram-боты. 1500+ часов разработки.",
   openGraph: {
-    title: "Портфолио — TERREYA HOLDING",
+    title: "Портфолио - TERREYA HOLDING",
     description: "8 реальных кейсов: от CRM до AI-оркестраторов и мобильных приложений.",
     url: "https://terreya.com/portfolio",
   },

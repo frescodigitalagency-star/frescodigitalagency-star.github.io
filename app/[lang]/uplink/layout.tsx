@@ -2,10 +2,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Связь — TERREYA HOLDING | Контакты и Telegram",
+  title: "Связь - TERREYA HOLDING | Контакты и Telegram",
   description: "Свяжитесь с Terreya Holding через защищённый канал Telegram (@D_rag) или email. Ташкент, Узбекистан.",
   openGraph: {
-    title: "Связь — TERREYA HOLDING",
+    title: "Связь - TERREYA HOLDING",
     description: "Контакты: Telegram @D_rag, email. Ташкент, Узбекистан.",
     url: "https://terreya.com/uplink",
   },

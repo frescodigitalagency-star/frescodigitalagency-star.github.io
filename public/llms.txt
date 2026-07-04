@@ -1,6 +1,6 @@
 # TERREYA HOLDING
 
-> Terreya Holding — создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.
+> Terreya Holding - создание ИИ-архитектуры, автоматизация бизнес-процессов, макро-системы и премиальная разработка.
 
 ## About Us
 Terreya Holding is an AI architecture and digital systems agency based in Uzbekistan. We build autonomous AI swarms, headless CRMs, B2B dashboards, and liminal/brutalist web interfaces.
