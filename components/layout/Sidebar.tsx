@@ -17,7 +17,10 @@ const NAV_KEYS = [
 
 export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) {
   const pathname = usePathname();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  // Static export has no middleware to prepend the locale — links must carry it
+  const localeHref = (href: string) => (href === "/" ? `/${lang}` : `/${lang}${href}`);
+  const cleanPathname = pathname.replace(/\/+$/, "") || "/";
 
   return (
     <>
@@ -38,8 +41,8 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
         <div className="px-8 py-4 border-b border-outline mb-4">
           <div className="flex items-center gap-3 mb-2">
             <div className="w-10 h-10 border border-outline flex items-center justify-center overflow-hidden relative">
-              <Image 
-                src="https://lh3.googleusercontent.com/aida/AP1WRLsCWB2QjCJSE4vmwzB0tlZFF-H0jjjA7bUPVBRSDnusiUvmbO0b405QhMHSooMLiq2eVeSahDGMMNde18zUfqS0fvqxfn0xTCdOQ-KjQaXpEEIj92Z1-j9dPp9J5DbmZwy6MvJgJ9QtAwnFZSRFsW1fHsZ6ELkohGko1PFP6KrDhWVPsSbCCks0UDq2CBa_vi70ak_oHwRufvEoFKNzEzMx0KBy9z1KJOmLhizwXSO52YmSwQNhQaQNiMk"
+              <Image
+                src="/logo.png"
                 alt="Terreya Logo"
                 fill
                 unoptimized
@@ -58,7 +61,7 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
         </div>
         <ul className="flex-grow overflow-y-auto pb-4">
           {NAV_KEYS.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = cleanPathname === localeHref(item.href);
             const name = t("nav", item.key);
             
             if (isActive) {
@@ -70,7 +73,7 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
                 >
                   <Link
                     className="flex items-center gap-3 px-8 py-3 font-data-mono text-data-mono"
-                    href={item.href}
+                    href={localeHref(item.href)}
                   >
                     <span>{name}</span>
                   </Link>
@@ -86,7 +89,7 @@ export function Sidebar({ isOpen, onClose }: { isOpen: boolean, onClose: () => v
               >
                 <Link
                   className="flex items-center gap-3 px-8 py-3 font-data-mono text-data-mono"
-                  href={item.href}
+                  href={localeHref(item.href)}
                 >
                   <span>{name}</span>
                 </Link>
