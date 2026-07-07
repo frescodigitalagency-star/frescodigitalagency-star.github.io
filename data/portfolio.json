@@ -282,7 +282,7 @@
   },
   {
     "id": "TERREYA_PORTFOLIO",
-    "src": "/portfolio/placeholder.png",
+    "src": "/portfolio/terreya_portfolio.png",
     "title": "TERREYA FRONTEND PORTFOLIO",
     "desc": "Одностраничный премиальный сайт-портфолио для фронтенд-разработчика. Адаптивная сетка, плавные анимации (Spring Physics) и WOW-эффекты на Canvas.",
     "link": "https://frescodigitalagency-star.github.io/terreya-portfolio/",
