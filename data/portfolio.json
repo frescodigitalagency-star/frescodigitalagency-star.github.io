@@ -1,21 +1,26 @@
 [
   {
-    "id": "AVRALAB",
-    "src": "/portfolio/avralab-v2.png",
-    "title": "AVRALAB.UZ",
-    "desc": "Студия визуальной и смысловой упаковки. Интеграция с CRM, дизайн в стиле brutalism.",
-    "link": "https://avralab.uz/",
+    "id": "TERREYA_PORTFOLIO",
+    "src": "/portfolio/terreya_portfolio.png",
+    "title": "TERREYA FRONTEND PORTFOLIO",
+    "desc": "Одностраничный премиальный сайт-портфолио для фронтенд-разработчика. Адаптивная сетка, плавные анимации (Spring Physics) и WOW-эффекты на Canvas.",
+    "link": "https://frescodigitalagency-star.github.io/terreya-portfolio/",
     "dossier": {
-      "goal": "Создание премиальной витрины для дизайн-студии с фокусом на визуальный сторителлинг.",
-      "hours": 140,
-      "architecture": "Статическая генерация (SSG) с гидратацией интерактивных компонентов.",
-      "stack": "Next.js, TailwindCSS, Framer Motion. Выбор обусловлен необходимостью сложной анимации и высокого SEO.",
-      "security": "Базовая защита роутов, CSRF токены для форм обратной связи.",
+      "goal": "Создать WOW-эффект для продажи услуг фронтенд-разработки и дизайна через визуальное влияние.",
+      "hours": 20,
+      "architecture": "Single-file Vanilla сайт (index.html) без фреймворков и сборщиков.",
+      "stack": [
+        "Vanilla JS",
+        "HTML5 Canvas",
+        "Lenis Smooth Scroll",
+        "CSS Transitions"
+      ],
+      "security": "Полностью статичный фронтенд.",
       "devTerms": [
-        "Brutalism UI",
-        "SSG",
-        "Micro-interactions",
-        "Framer Motion"
+        "Vanilla Web",
+        "Liquid Reveal",
+        "Adaptive Grid",
+        "Spring Physics"
       ]
     }
   },
@@ -40,27 +45,22 @@
     }
   },
   {
-    "id": "TERREYA_PORTFOLIO",
-    "src": "/portfolio/terreya_portfolio.png",
-    "title": "TERREYA FRONTEND PORTFOLIO",
-    "desc": "Одностраничный премиальный сайт-портфолио для фронтенд-разработчика. Адаптивная сетка, плавные анимации (Spring Physics) и WOW-эффекты на Canvas.",
-    "link": "https://frescodigitalagency-star.github.io/terreya-portfolio/",
+    "id": "AVRALAB",
+    "src": "/portfolio/avralab-v2.png",
+    "title": "AVRALAB.UZ",
+    "desc": "Студия визуальной и смысловой упаковки. Интеграция с CRM, дизайн в стиле brutalism.",
+    "link": "https://avralab.uz/",
     "dossier": {
-      "goal": "Создать WOW-эффект для продажи услуг фронтенд-разработки и дизайна через визуальное влияние.",
-      "hours": 20,
-      "architecture": "Single-file Vanilla сайт (index.html) без фреймворков и сборщиков.",
-      "stack": [
-        "Vanilla JS",
-        "HTML5 Canvas",
-        "Lenis Smooth Scroll",
-        "CSS Transitions"
-      ],
-      "security": "Полностью статичный фронтенд.",
+      "goal": "Создание премиальной витрины для дизайн-студии с фокусом на визуальный сторителлинг.",
+      "hours": 140,
+      "architecture": "Статическая генерация (SSG) с гидратацией интерактивных компонентов.",
+      "stack": "Next.js, TailwindCSS, Framer Motion. Выбор обусловлен необходимостью сложной анимации и высокого SEO.",
+      "security": "Базовая защита роутов, CSRF токены для форм обратной связи.",
       "devTerms": [
-        "Vanilla Web",
-        "Liquid Reveal",
-        "Adaptive Grid",
-        "Spring Physics"
+        "Brutalism UI",
+        "SSG",
+        "Micro-interactions",
+        "Framer Motion"
       ]
     }
   },
