@@ -279,5 +279,30 @@
         "API"
       ]
     }
+  },
+  {
+    "id": "TERREYA_PORTFOLIO",
+    "src": "/portfolio/placeholder.png",
+    "title": "TERREYA FRONTEND PORTFOLIO",
+    "desc": "Одностраничный премиальный сайт-портфолио для фронтенд-разработчика. Адаптивная сетка, плавные анимации (Spring Physics) и WOW-эффекты на Canvas.",
+    "link": "https://frescodigitalagency-star.github.io/terreya-portfolio/",
+    "dossier": {
+      "goal": "Создать WOW-эффект для продажи услуг фронтенд-разработки и дизайна через визуальное влияние.",
+      "hours": 20,
+      "architecture": "Single-file Vanilla сайт (index.html) без фреймворков и сборщиков.",
+      "stack": [
+        "Vanilla JS",
+        "HTML5 Canvas",
+        "Lenis Smooth Scroll",
+        "CSS Transitions"
+      ],
+      "security": "Полностью статичный фронтенд.",
+      "devTerms": [
+        "Vanilla Web",
+        "Liquid Reveal",
+        "Adaptive Grid",
+        "Spring Physics"
+      ]
+    }
   }
 ]
