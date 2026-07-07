@@ -40,21 +40,27 @@
     }
   },
   {
-    "id": "CRM_APP",
-    "src": "/portfolio/crm_app.png",
-    "title": "CRM-APP & DASHBOARD",
-    "desc": "Основная задеплоенная CRM система + headless-слой crm-cli для личного учёта расходов и автоматизации бизнес-процессов.",
+    "id": "TERREYA_PORTFOLIO",
+    "src": "/portfolio/terreya_portfolio.png",
+    "title": "TERREYA FRONTEND PORTFOLIO",
+    "desc": "Одностраничный премиальный сайт-портфолио для фронтенд-разработчика. Адаптивная сетка, плавные анимации (Spring Physics) и WOW-эффекты на Canvas.",
+    "link": "https://frescodigitalagency-star.github.io/terreya-portfolio/",
     "dossier": {
-      "goal": "Автоматизация учета финансов и управления задачами холдинга.",
-      "hours": 320,
-      "architecture": "Headless CLI слой + Web App (Vite/React). Два разных хранилища с похожей схемой.",
-      "stack": "Vite/React 18 + Express + PostgreSQL (Supabase pooler). JWT, bcryptjs, zod, express-rate-limit.",
-      "security": "JWT-авторизация, bcrypt шифрование, ограничение запросов (Rate Limiting).",
+      "goal": "Создать WOW-эффект для продажи услуг фронтенд-разработки и дизайна через визуальное влияние.",
+      "hours": 20,
+      "architecture": "Single-file Vanilla сайт (index.html) без фреймворков и сборщиков.",
+      "stack": [
+        "Vanilla JS",
+        "HTML5 Canvas",
+        "Lenis Smooth Scroll",
+        "CSS Transitions"
+      ],
+      "security": "Полностью статичный фронтенд.",
       "devTerms": [
-        "Headless CLI",
-        "Vite",
-        "Zod",
-        "Supabase Pooler"
+        "Vanilla Web",
+        "Liquid Reveal",
+        "Adaptive Grid",
+        "Spring Physics"
       ]
     }
   },
@@ -281,27 +287,21 @@
     }
   },
   {
-    "id": "TERREYA_PORTFOLIO",
-    "src": "/portfolio/terreya_portfolio.png",
-    "title": "TERREYA FRONTEND PORTFOLIO",
-    "desc": "Одностраничный премиальный сайт-портфолио для фронтенд-разработчика. Адаптивная сетка, плавные анимации (Spring Physics) и WOW-эффекты на Canvas.",
-    "link": "https://frescodigitalagency-star.github.io/terreya-portfolio/",
+    "id": "CRM_APP",
+    "src": "/portfolio/crm_app.png",
+    "title": "CRM-APP & DASHBOARD",
+    "desc": "Основная задеплоенная CRM система + headless-слой crm-cli для личного учёта расходов и автоматизации бизнес-процессов.",
     "dossier": {
-      "goal": "Создать WOW-эффект для продажи услуг фронтенд-разработки и дизайна через визуальное влияние.",
-      "hours": 20,
-      "architecture": "Single-file Vanilla сайт (index.html) без фреймворков и сборщиков.",
-      "stack": [
-        "Vanilla JS",
-        "HTML5 Canvas",
-        "Lenis Smooth Scroll",
-        "CSS Transitions"
-      ],
-      "security": "Полностью статичный фронтенд.",
+      "goal": "Автоматизация учета финансов и управления задачами холдинга.",
+      "hours": 320,
+      "architecture": "Headless CLI слой + Web App (Vite/React). Два разных хранилища с похожей схемой.",
+      "stack": "Vite/React 18 + Express + PostgreSQL (Supabase pooler). JWT, bcryptjs, zod, express-rate-limit.",
+      "security": "JWT-авторизация, bcrypt шифрование, ограничение запросов (Rate Limiting).",
       "devTerms": [
-        "Vanilla Web",
-        "Liquid Reveal",
-        "Adaptive Grid",
-        "Spring Physics"
+        "Headless CLI",
+        "Vite",
+        "Zod",
+        "Supabase Pooler"
       ]
     }
   }
